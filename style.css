@@ -90,12 +90,29 @@ li {
   border-right: 1px solid #ddd;
 }
 
+/* Left Sidebar */
+.left-sidebar {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 60px;
+  height: calc(100vh - 60px);
+  width: 5.49vw;
+  height: 90%;
+  background: #f3f3f3;
+  border-right: 1px solid #ddd;
+}
+
 .left-sidebar ul {
   height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .left-sidebar ul li {
-  height: 25%;
+  flex: 1;
+  min-height: 80px;
+  /* Minimum height for each item */
 }
 
 .left-sidebar a {
@@ -113,6 +130,7 @@ li {
   font-family: "Barlow Semi Condensed", sans-serif;
   padding: 0 1.5vw;
 }
+
 
 .link-1:hover {
   background: #ebb762;
@@ -234,6 +252,32 @@ li {
   text-align: center;
   margin-top: 10px;
 }
+
+.artist-btn {
+  display: inline-block;
+  /* make button behave inline */
+  margin-top: 20px;
+  /* spacing below p */
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.artist-btn:hover {
+  background-color: #444;
+}
+
+/* center the button inside artist-top */
+.artist-top {
+  text-align: center;
+}
+
 
 .artistSlider-container {
   position: relative;
