@@ -173,6 +173,88 @@
       /* add spacing below carousel */
       text-align: center;
     }
+
+    /* Event carousel section */
+    .eventscarusal-section {
+      margin-top: 50px;
+    }
+
+    .eventscarusal-section-top h2 {
+      font-size: 2.489vw;
+      line-height: 1;
+      letter-spacing: -0.115vw;
+      font-family: "Barlow Semi Condensed", sans-serif;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    .eventscarusal-section-top p {
+      font-size: 2.049vw;
+      font-family: "Barlow", sans-serif;
+      font-weight: 300;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    /* Hover effect: hide name-box */
+    .eventSwiper .swiper-slide {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eventSwiper .swiper-slide .name-box-event {
+      position: absolute;
+      bottom: 10px;
+      /* visible by default */
+      left: 50%;
+      transform: translateX(-50%);
+
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 4px;
+      opacity: 1;
+      transition: bottom 0.4s ease, opacity 0.4s ease;
+    }
+
+    .eventSwiper .swiper-slide:hover .name-box-event {
+      bottom: -40px;
+      /* slide down and disappear */
+      opacity: 0;
+    }
+
+    .eventSwiper .swiper-slide .name-box-event {
+      /* padding: 1.2vw 1.5vw; */
+      color: #fff;
+      font-size: 1.171vw;
+      font-family: "Barlow", sans-serif;
+      font-weight: 300;
+      /* background-color: #062b3b; */
+    }
+
+    .eventSwiper .swiper-slide {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .eventSwiper .swiper-slide:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .eventSwiper .swiper-slide img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .eventSwiper .swiper-slide:hover img {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 
@@ -221,7 +303,7 @@
       <li><span class="bar orange"></span><a href="#art">art work</a></li>
       <li><span class="bar blue"></span><a href="#event">events</a></li>
       <li><span class="bar green"></span><a href="#promo">promotions</a></li>
-      <li><span class="bar green"></span><a href="gallery.html">gallery</a></li>
+      <!-- <li><span class="bar green"></span><a href="gallery.html">gallery</a></li> -->
     </ul>
 
     <div class="nav-footer-links">
@@ -242,7 +324,7 @@
       <li><a href="#art" class="link-2">art works</a></li>
       <li><a href="#event" class="link-3">events</a></li>
       <li><a href="#promo" class="link-4">promotions</a></li>
-      <li><a href="gallery.html" class="link-4">gallery</a></li>
+      <!-- <li><a href="gallery.html" class="link-4">gallery</a></li> -->
     </ul>
   </aside>
   <!-- mobile navbar -->
@@ -302,7 +384,7 @@
           </div>
           <div class="swiper-slide">
             <img src="images/snehal-min.jpg" class="img-fluid object-cover" alt="Art 3" />
-            <div class="name-box">Snehal Desai</div>
+            <div class="name-box">Snehal Pradhan</div>
           </div>
           <div class="swiper-slide">
             <img src="images/ravindra-saravaiya.png" class="img-fluid object-cover" alt="Art 4" />
@@ -318,7 +400,7 @@
           </div>
           <div class="swiper-slide">
             <img src="images/sneha-min.jpg" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Sneha Desai</div>
+            <div class="name-box">Sneha Lakhotiya</div>
           </div>
         </div>
 
@@ -328,8 +410,8 @@
     </section>
 
     <!-- Event Section -->
-    <section class="artist-section" id="artist">
-      <div class="artist-top">
+    <section class="eventscarusal-section" id="events">
+      <div class="eventscarusal-section-top">
         <h2>Events</h2>
         <p>Discover upcoming events / exhibitions!</p>
       </div>
@@ -337,37 +419,34 @@
       <!-- Swiper Container -->
       <div class="swiper eventSwiper">
         <div class="swiper-wrapper">
-          <!-- Each Artist Card -->
+          <!-- Each Event Card -->
           <div class="swiper-slide">
-            <img src="images/eva-joy.png" class="img-fluid object-cover" alt="Art 2" />
-            <div class="name-box">Event 1</div>
+            <a href="events.html" style="text-decoration: none;">
+              <img src="images/banner-1-1-min.png" class="img-fluid object-cover" alt="Event 1" />
+              <!-- <div class="name-box-event">Event 1</div> -->
+            </a>
           </div>
+
           <div class="swiper-slide">
-            <img src="images/snehal-min.jpg" class="img-fluid object-cover" alt="Art 3" />
-            <div class="name-box">Event 2</div>
+            <a href="events.html" style="text-decoration: none;">
+              <img src="images/banner-1-1-min.png" class="img-fluid object-cover" alt="Event 2" />
+              <!-- <div class="name-box-event">Event 2</div> -->
+            </a>
           </div>
+
           <div class="swiper-slide">
-            <img src="images/ravindra-saravaiya.png" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Event 3</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/kumar-krishna.png" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Event 4</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/nidhi-sabhaya.png" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box"> Event 5</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/sneha-min.jpg" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box"> Event 6</div>
+            <a href="events.html" style="text-decoration: none;">
+              <img src="images/banner-1-1-min.png" class="img-fluid object-cover" alt="Event 3" />
+              <!-- <div class="name-box-event">Event 3</div> -->
+            </a>
           </div>
         </div>
 
-        <!-- Navigation + Pagination -->
+        <!-- Pagination -->
         <div class="swiper-pagination"></div>
       </div>
     </section>
+
 
     <!-- <section class="artist-section" id="artist" style="display: none">
         <div class="artist-top">
@@ -900,7 +979,7 @@
         prevEl: ".swiper-button-prev",
       },
       breakpoints: {
-        320: { slidesPerView: 1 },
+        320: { slidesPerView: 2 },
         576: { slidesPerView: 2 },
         768: { slidesPerView: 3 },
         992: { slidesPerView: 4 },
