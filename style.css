@@ -290,6 +290,145 @@ li {
 .artistSwiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
+/* ============================================
+   YOU TUBE SECTION
+   ============================================ */
+.youTube-section {
+  margin-top: 80px;
+  /* padding: 0 0.5vw; */
+}
+
+.youTube-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+/* Prevent transition jump (instant slide instead of animated) */
+.youTubeSwiper .swiper-wrapper {
+  /* transform: none !important; */
+}
+
+/* Optional: Prevent transform effects (only if you don’t need sliding, not recommended) */
+.youTubeSwiper .swiper-slide {
+  transform: none !important;
+}
+
+.youTube-top h2 {
+  font-size: 2.489vw;
+  line-height: 1;
+  letter-spacing: -0.115vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.youTube-top p {
+  font-size: 2.049vw;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+/* youTube Swiper */
+.youTubeSwiper {
+  /* padding: 20px 0 40px; */
+  max-width: 1400px;
+  /* margin: 0 auto; */
+}
+
+.youTubeSwiper .swiper-slide {
+  background: #000;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  /* width: 280px !important; */
+  height: 500px !important;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.youTubeSwiper .swiper-slide:hover {
+  /* transform: translateY(-10px); */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.shorts-iframe-container {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  /* position: relative; */
+  background: #000;
+}
+
+.shorts-iframe-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+}
+
+/* Navigation */
+.youTubeSwiper .swiper-button-next,
+.youTubeSwiper .swiper-button-prev {
+  color: #111;
+  width: 45px;
+  height: 45px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.youTubeSwiper .swiper-button-next:after,
+.youTubeSwiper .swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.youTubeSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.youTubeSwiper .swiper-pagination-bullet {
+  background: #111;
+  opacity: 0.3;
+}
+
+.youTubeSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .youTube-section {
+    margin-top: 50px;
+    padding: 0 4vw;
+  }
+
+  .youTube-top h2 {
+    font-size: 6vw !important;
+  }
+
+  .youTube-top p {
+    font-size: 4vw !important;
+  }
+
+  .youTubeSwiper .swiper-slide {
+    width: 200px !important;
+    height: 355px !important;
+  }
+
+  .youTubeSwiper .swiper-button-next,
+  .youTubeSwiper .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .youTubeSwiper .swiper-button-next:after,
+  .youTubeSwiper .swiper-button-prev:after {
+    font-size: 16px;
+  }
+}
 /* ============================================
    ART WORKS SECTION
    ============================================ */
@@ -510,6 +649,7 @@ li {
 /* Artwork Slider Section */
 .artwork-slider-section {
   margin-top: 50px;
+  text-align: center;
 }
 
 .artwork-slider-header {
@@ -677,21 +817,32 @@ li {
   border-radius: 10px;
   transition: all 0.3s ease;
   cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.eventSwiper .swiper-slide:hover {
-  transform: translateY(-5px);
-}
+/* .eventSwiper .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0.5px solid grey; /* always visible */
 
 .eventSwiper .swiper-slide img {
   width: 100%;
   height: 300px;
   object-fit: cover;
   transition: transform 0.3s ease;
+  display: block; /* prevents image overflow weirdness */
 }
 
 .eventSwiper .swiper-slide:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05); /* only image zooms */
+}
+
+/* remove translate effect on the whole slide */
+.eventSwiper .swiper-slide:hover {
+  transform: none;
 }
 
 .eventSwiper .swiper-slide .name-box-event {
