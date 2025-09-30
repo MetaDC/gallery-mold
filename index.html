@@ -1,1009 +1,1186 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-E0Z53KBL2C"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-E0Z53KBL2C"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
+      gtag("config", "G-E0Z53KBL2C");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      property="og:title"
+      content="Gallery Mold - Aesthetic & Conceptual Dimensions of Modern Times"
+    />
+    <meta
+      property="og:description"
+      content="Explores the aesthetic and conceptual dimensions of modern times, bridging innovative practices."
+    />
+    <meta
+      property="og:image"
+      content="https://gallerymold.com/images/social-preview.png"
+    />
+    <meta property="og:url" content="https://gallerymold.com/" />
+    <meta property="og:type" content="website" />
 
-    gtag("config", "G-E0Z53KBL2C");
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Gallery Mold - Aesthetic & Conceptual Dimensions of Modern Times" />
-  <meta property="og:description"
-    content="Explores the aesthetic and conceptual dimensions of modern times, bridging innovative practices." />
-  <meta property="og:image" content="https://gallerymold.com/images/social-preview.png" />
-  <meta property="og:url" content="https://gallerymold.com/" />
-  <meta property="og:type" content="website" />
+    <title>Gallery Mold</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" sizes="16x16" href="images/favicon.png" />
 
-  <title>Gallery Mold</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet" />
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="icon" sizes="16x16" href="images/favicon.png" />
+    <!-- Optional: Bootstrap JS (if you need dropdowns, modals, etc.) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-  <!-- Optional: Bootstrap JS (if you need dropdowns, modals, etc.) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <style>
-    .loader-container {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: #ffffff;
-      z-index: 99999999999;
-      visibility: visible;
-    }
-
-    /* Spinner Animation */
-    .spinner {
-      width: 50px;
-      height: 50px;
-      border: 5px solid #ccc;
-      border-top: 5px solid #3498db;
-      border-radius: 50%;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% {
-        transform: rotate(0deg);
+    <style>
+      .loader-container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        z-index: 99999999999;
+        visibility: visible;
       }
 
-      100% {
-        transform: rotate(360deg);
+      /* Spinner Animation */
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid #ccc;
+        border-top: 5px solid #000;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
       }
-    }
 
-    .popup-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100vw;
-      background: rgba(0, 0, 0, 0.4);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
 
-    .popup-modal {
-      background-color: #fff;
-      border-radius: 10px;
-      max-width: 480px;
-      width: 90%;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-      position: relative;
-      max-height: 90vh;
-      overflow-y: auto;
-      display: grid;
-    }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
 
-    .popup-modal h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      font-weight: bold;
-      text-align: center;
-    }
+      .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.4);
+        display: none;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+      }
 
-    .popup-modal p {
-      font-size: 15px;
-      color: #333;
-      line-height: 1.5;
-      margin-bottom: 20px;
-      text-align: center;
-    }
+      .popup-modal {
+        background-color: #fff;
+        border-radius: 10px;
+        max-width: 480px;
+        width: 90%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        position: relative;
+        max-height: 90vh;
+        overflow-y: auto;
+        display: grid;
+      }
 
-    .popup-modal button {
-      padding: 10px 20px;
-      background-color: #007aff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin: 0 auto;
-    }
+      .popup-modal h2 {
+        margin: 0 0 10px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
 
-    .popup-modal button:hover {
-      background-color: #005ecc;
-    }
+      .popup-modal p {
+        font-size: 15px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        text-align: center;
+      }
 
-    .close-btn {
-      position: absolute;
-      top: 5px;
-      right: 16px;
-      font-size: 30px;
-      font-weight: bold;
-      color: #555;
-      cursor: pointer;
-    }
+      .popup-modal button {
+        padding: 10px 20px;
+        background-color: #007aff;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: background 0.3s;
+        margin: 0 auto;
+      }
 
-    .close-btn:hover {
-      color: #000;
-    }
+      .popup-modal button:hover {
+        background-color: #005ecc;
+      }
 
-    .top-center .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* Optional: vertical centering */
-    }
+      .close-btn {
+        position: absolute;
+        top: 5px;
+        right: 16px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #555;
+        cursor: pointer;
+      }
 
-    .top-center .logo img {
-      width: 50%;
-    }
+      .close-btn:hover {
+        color: #000;
+      }
 
-    /* ARTIST SECTION */
-    .artistSwiper .swiper-pagination {
-      position: relative;
-      /* instead of absolute */
-      margin-top: 20px;
-      /* add spacing below carousel */
-      text-align: center;
-    }
+      .top-center .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Optional: vertical centering */
+      }
 
-    .eventSwiper .swiper-pagination {
-      position: relative;
-      /* instead of absolute */
-      margin-top: 20px;
-      /* add spacing below carousel */
-      text-align: center;
-    }
+      .top-center .logo img {
+        width: 50%;
+      }
+    </style>
+  </head>
 
-    /* Event carousel section */
-    .eventscarusal-section {
-      margin-top: 50px;
-    }
-
-    .eventscarusal-section-top h2 {
-      font-size: 2.489vw;
-      line-height: 1;
-      letter-spacing: -0.115vw;
-      font-family: "Barlow Semi Condensed", sans-serif;
-      text-align: center;
-      font-weight: 500;
-    }
-
-    .eventscarusal-section-top p {
-      font-size: 2.049vw;
-      font-family: "Barlow", sans-serif;
-      font-weight: 300;
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    /* Hover effect: hide name-box */
-    .eventSwiper .swiper-slide {
-      position: relative;
-      overflow: hidden;
-    }
-
-    .eventSwiper .swiper-slide .name-box-event {
-      position: absolute;
-      bottom: 10px;
-      /* visible by default */
-      left: 50%;
-      transform: translateX(-50%);
-
-      color: #fff;
-      padding: 6px 12px;
-      border-radius: 4px;
-      opacity: 1;
-      transition: bottom 0.4s ease, opacity 0.4s ease;
-    }
-
-    .eventSwiper .swiper-slide:hover .name-box-event {
-      bottom: -40px;
-      /* slide down and disappear */
-      opacity: 0;
-    }
-
-    .eventSwiper .swiper-slide .name-box-event {
-      /* padding: 1.2vw 1.5vw; */
-      color: #fff;
-      font-size: 1.171vw;
-      font-family: "Barlow", sans-serif;
-      font-weight: 300;
-      /* background-color: #062b3b; */
-    }
-
-    .eventSwiper .swiper-slide {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .eventSwiper .swiper-slide:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    }
-
-    .eventSwiper .swiper-slide img {
-      width: 100%;
-      height: 300px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-    }
-
-    .eventSwiper .swiper-slide:hover img {
-      transform: scale(1.05);
-    }
-  </style>
-</head>
-
-<body>
-  <div id="loader" class="loader-container">
-    <div class="spinner"></div>
-  </div>
-  <div id="popup" class="popup-overlay">
-    <div class="popup-modal" id="popupModal" style="padding: 20px">
-      <div class="pop-header" style="border-bottom: 1px solid #555">
-        <span class="close-btn" id="closeBtn">&times;</span>
-        <h2 style="margin-bottom: 10px">Register for Upcoming Event!</h2>
-      </div>
-      <p style="margin-top: 20px">
-        Join us for an exciting event! Register now to save your spot.
-      </p>
-      <button onclick="window.location.href='/contact.html'">
-        Register Now
-      </button>
+  <body>
+    <div id="loader" class="loader-container">
+      <div class="spinner"></div>
     </div>
-  </div>
-  <!-- Top Navbar -->
-  <header class="top-navbar">
-    <div class="top-left">
-      <a href="#"><img src="images/call.png" /></a>
-      <a href="#"><img src="images/email.png" /></a>
-    </div>
-    <div class="top-center">
-      <a href="index.html" class="logo"><img src="images/gallerymold-logo-mob.png" /></a>
-    </div>
-    <div class="top-right">
-      <p>Read More:</p>
-      <a href="#about">About Us</a>
-    </div>
-  </header>
-  <!-- Mobile Navbar -->
-  <header class="mobile-navbar">
-    <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo" />
-    <div class="hamburger" id="toggleBtn">&#9776;</div>
-  </header>
-
-  <!-- Sliding Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul class="menu-items">
-      <li><span class="bar yellow"></span><a href="#artist">artists</a></li>
-      <li><span class="bar orange"></span><a href="#art">art work</a></li>
-      <li><span class="bar blue"></span><a href="#event">events</a></li>
-      <li><span class="bar green"></span><a href="#promo">promotions</a></li>
-      <!-- <li><span class="bar green"></span><a href="gallery.html">gallery</a></li> -->
-    </ul>
-
-    <div class="nav-footer-links">
-      <div>
-        <p><a href="#about">About Us</a></p>
-        <p><a href="contact.html">Contact Us</a></p>
-      </div>
-      <div>
-        <p>Also Checkout</p>
-        <p><a href="https://atelierbaroda.com/">atelierbaroda.com</a></p>
+    <div id="popup" class="popup-overlay">
+      <div class="popup-modal" id="popupModal" style="padding: 20px">
+        <div class="pop-header" style="border-bottom: 1px solid #555">
+          <span class="close-btn" id="closeBtn">&times;</span>
+          <h2 style="margin-bottom: 10px">Register for Upcoming Event!</h2>
+        </div>
+        <p style="margin-top: 20px">
+          Join us for an exciting event! Register now to save your spot.
+        </p>
+        <button onclick="window.location.href='/contact.html'">
+          Register Now
+        </button>
       </div>
     </div>
-  </div>
-  <!-- Left Sidebar -->
-  <aside class="left-sidebar">
-    <ul>
-      <li><a href="#artist" class="link-1">artists</a></li>
-      <li><a href="#art" class="link-2">art works</a></li>
-      <li><a href="#event" class="link-3">events</a></li>
-      <li><a href="#promo" class="link-4">promotions</a></li>
-      <!-- <li><a href="gallery.html" class="link-4">gallery</a></li> -->
-    </ul>
-  </aside>
-  <!-- mobile navbar -->
-  <!-- Main Content -->
-  <main class="main-content">
-    <section class="banner-slide">
-      <div class="custom-carousel">
-        <!-- <div class="carousel-slide ">
+    <!-- Top Navbar -->
+    <header class="top-navbar">
+      <div class="top-left">
+        <a href="#"><img src="images/call.png" /></a>
+        <a href="#"><img src="images/email.png" /></a>
+      </div>
+      <div class="top-center">
+        <a href="index.html" class="logo"
+          ><img src="images/gallerymold-logo-mob.png"
+        /></a>
+      </div>
+      <div class="top-right">
+        <p>Read More:</p>
+        <a href="#about">About Us</a>
+      </div>
+    </header>
+    <!-- Mobile Navbar -->
+    <header class="mobile-navbar">
+      <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo" />
+      <div class="hamburger" id="toggleBtn">&#9776;</div>
+    </header>
+
+    <!-- Sliding Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="menu-items">
+        <li><span class="bar yellow"></span><a href="#artist">artists</a></li>
+        <li><span class="bar orange"></span><a href="#art">art work</a></li>
+        <li><span class="bar blue"></span><a href="#event">events</a></li>
+        <li><span class="bar green"></span><a href="#promo">promotions</a></li>
+        <!-- <li><span class="bar green"></span><a href="gallery.html">gallery</a></li> -->
+      </ul>
+
+      <div class="nav-footer-links">
+        <div>
+          <p><a href="#about">About Us</a></p>
+          <p><a href="contact.html">Contact Us</a></p>
+        </div>
+        <div>
+          <p>Also Checkout</p>
+          <p><a href="https://atelierbaroda.com/">atelierbaroda.com</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Left Sidebar -->
+    <aside class="left-sidebar">
+      <ul>
+        <li><a href="#artist" class="link-1">artists</a></li>
+        <li><a href="#art" class="link-2">art works</a></li>
+        <li><a href="#event" class="link-3">events</a></li>
+        <li><a href="#promo" class="link-4">promotions</a></li>
+        <!-- <li><a href="gallery.html" class="link-4">gallery</a></li> -->
+      </ul>
+    </aside>
+    <!-- mobile navbar -->
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Banner Section -->
+      <section class="banner-slide">
+        <div class="custom-carousel">
+          <!-- <div class="carousel-slide ">
           <img src="images/banner-1-1-min.png" class="img-fluid" />
         </div> -->
 
-        <!-- Add 4 more slides -->
-        <div class="carousel-slide active">
-          <img src="images/hero/1.webp" class="img-fluid" />
-        </div>
-        <div class="carousel-slide">
-          <img src="images/hero/2.webp" class="img-fluid" />
-        </div>
-        <div class="carousel-slide">
-          <img src="images/hero/3.webp" class="img-fluid" />
-        </div>
-        <!-- <div class="carousel-slide">
+          <!-- Add 4 more slides -->
+          <div class="carousel-slide active">
+            <img src="images/hero/1.webp" class="img-fluid" />
+          </div>
+          <div class="carousel-slide">
+            <img src="images/hero/2.webp" class="img-fluid" />
+          </div>
+          <div class="carousel-slide">
+            <img src="images/hero/3.webp" class="img-fluid" />
+          </div>
+          <!-- <div class="carousel-slide">
             <img src="images/hero-4-min.png" class="img-fluid" />
           </div> -->
 
-        <!-- Arrows -->
-        <button class="arrow left">
-          <img src="images/left-arrow.png" />
-        </button>
-        <button class="arrow right">
-          <img src="images/right-arrow.png" />
-        </button>
+          <!-- Arrows -->
+          <button class="arrow left">
+            <img src="images/left-arrow.png" />
+          </button>
+          <button class="arrow right">
+            <img src="images/right-arrow.png" />
+          </button>
 
-        <!-- Dots -->
-        <div class="carousel-dots">
-          <span class="dot active"></span>
-          <span class="dot"></span>
-          <span class="dot"></span>
-          <!-- <span class="dot"></span> -->
-        </div>
-      </div>
-    </section>
-    <!-- Artist Section -->
-    <section class="artist-section" id="artist">
-      <div class="artist-top">
-        <h2>Artists</h2>
-        <p>Minds behind the masterpieces!</p>
-      </div>
-
-      <!-- Swiper Container -->
-      <div class="swiper artistSwiper">
-        <div class="swiper-wrapper">
-          <!-- Each Artist Card -->
-          <div class="swiper-slide">
-            <img src="images/eva-joy.png" class="img-fluid object-cover" alt="Art 2" />
-            <div class="name-box">Eva Joy</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/snehal-min.jpg" class="img-fluid object-cover" alt="Art 3" />
-            <div class="name-box">Snehal Pradhan</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/ravindra-saravaiya.png" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Ravindra Saravaiya</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/kumar-krishna.png" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Kumar Krishna</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/nidhi-sabhaya.png" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Nidhi Sabhaya</div>
-          </div>
-          <div class="swiper-slide">
-            <img src="images/sneha-min.jpg" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Sneha Lakhotiya</div>
+          <!-- Dots -->
+          <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <!-- <span class="dot"></span> -->
           </div>
         </div>
+      </section>
 
-        <!-- Navigation + Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <!-- Event Section -->
-    <section class="eventscarusal-section" id="events">
-      <div class="eventscarusal-section-top">
-        <h2>Events</h2>
-        <p>Discover upcoming events / exhibitions!</p>
-      </div>
-
-      <!-- Swiper Container -->
-      <div class="swiper eventSwiper">
-        <div class="swiper-wrapper">
-          <!-- Each Event Card -->
-          <div class="swiper-slide">
-            <a href="events.html" style="text-decoration: none;">
-              <img src="images/banner-1-1-min.png" class="img-fluid object-cover" alt="Event 1" />
-              <!-- <div class="name-box-event">Event 1</div> -->
-            </a>
+      <!-- Glimpses Section -->
+      <section class="art-section" id="art">
+        <div class="art-top text-center mb-4">
+          <h2>Glimpses</h2>
+          <p>Crafted with passion & creativity !</p>
+        </div>
+        <div class="container-fluid">
+          <!-- First Row: Single Full-Width Image -->
+          <div class="row art-row mb-3">
+            <div class="col-12">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-1-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 1"
+                />
+              </div>
+            </div>
           </div>
 
-          <div class="swiper-slide">
-            <a href="events.html" style="text-decoration: none;">
-              <img src="images/banner-1-1-min.png" class="img-fluid object-cover" alt="Event 2" />
-              <!-- <div class="name-box-event">Event 2</div> -->
-            </a>
-          </div>
-
-          <div class="swiper-slide">
-            <a href="events.html" style="text-decoration: none;">
-              <img src="images/banner-1-1-min.png" class="img-fluid object-cover" alt="Event 3" />
-              <!-- <div class="name-box-event">Event 3</div> -->
-            </a>
+          <!-- Second Row: Three Images Side by Side -->
+          <div class="row g-3">
+            <div class="col-md-8">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-2-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 2"
+                  height="515px"
+                />
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-3-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 3"
+                />
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-4-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 4"
+                />
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
+      <!-- About Us Section -->
+      <section class="about-us" id="about">
+        <div class="row">
+          <div class="about-img col-md-5 col-sm-12">
+            <img src="images/about-photo.png" class="img-fluid" />
+          </div>
+          <div class="about-content col-md-6 col-sm-12">
+            <img src="images/about_tag.png" class="img-fluid tag-img" />
+            <h2>
+              Shaping the Future of Contemporary Art in India and the
+              Subcontinent!
+            </h2>
+            <p>
+              Gallery MOLD is a new art venue designed to amplify the voices of
+              young and emerging artists. Our platform is dedicated to providing
+              opportunities for up-and-coming practitioners to express their
+              vital ideas in today's world. We strive to create an environment
+              where artists can experiment, learn, and grow. By supporting young
+              artists at critical junctures in their careers, we aim to enrich
+              the cultural landscape and foster contemporary discourse.
+            </p>
+            <p>
+              Our curated exhibitions aim to inspire, challenge boundaries, and
+              stimulate new dialogue in the evolution of a contemporary artistic
+              era. We strive to connect emerging creators with the broader
+              community to cultivate a deeper appreciation for contemporary
+              practices.
+            </p>
+          </div>
+        </div>
+      </section>
 
+      <!-- Mission/Vision Section -->
+      <section class="mission-vision-section">
+        <div class="mission-vision-header">
+          <h2>Our Mission & Vision</h2>
+          <p>Guiding principles that shape our journey!</p>
+        </div>
 
-    <!-- <section class="artist-section" id="artist" style="display: none">
+        <div class="mission-vision-content">
+          <div class="mission-box">
+            <h3>Mission</h3>
+            <p>
+              To amplify the voices of young and emerging artists by providing a
+              platform that nurtures creativity, encourages experimentation, and
+              fosters meaningful dialogue. We are committed to supporting
+              artists at critical stages of their careers, helping them express
+              vital ideas that shape our contemporary world.
+            </p>
+          </div>
+
+          <div class="vision-box">
+            <h3>Vision</h3>
+            <p>
+              To become a leading force in shaping the future of contemporary
+              art in India and the subcontinent. We envision a vibrant artistic
+              community where emerging practitioners can thrive, boundaries are
+              challenged, and new perspectives enrich the cultural landscape for
+              generations to come.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Artwork Slider Section -->
+      <section class="artwork-slider-section">
+        <div class="artwork-slider-header">
+          <h2>Atelier Artwork</h2>
+          <p>Curated collections from talented artists</p>
+          <a href="#" class="view-all">View All</a>
+          <div style="clear: both"></div>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper artworkSwiper">
+          <div class="swiper-wrapper">
+            <!-- Artwork Card 1 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500"
+                alt="Artwork 1"
+                class="artwork-image"
+              />
+              <div class="artwork-info">
+                <div class="artwork-title">Abstract Expressions</div>
+                <div class="artwork-artist">Artist: Sameer Patel</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <!-- Artwork Card 2 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=500"
+                alt="Artwork 2"
+                class="artwork-image"
+              />
+              <div class="artwork-info">
+                <div class="artwork-title">Urban Landscapes</div>
+                <div class="artwork-artist">Artist: Priya Shah</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <!-- Artwork Card 3 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=500"
+                alt="Artwork 3"
+                class="artwork-image"
+              />
+              <div class="artwork-info">
+                <div class="artwork-title">Nature's Palette</div>
+                <div class="artwork-artist">Artist: Kumar Krishna</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <!-- Artwork Card 4 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1578301978162-7aae4d755744?w=500"
+                alt="Artwork 4"
+                class="artwork-image"
+              />
+              <div class="artwork-info">
+                <div class="artwork-title">Contemporary Forms</div>
+                <div class="artwork-artist">Artist: Snehal Pradhan</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <!-- Artwork Card 5 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=500"
+                alt="Artwork 5"
+                class="artwork-image"
+              />
+              <div class="artwork-info">
+                <div class="artwork-title">Vibrant Visions</div>
+                <div class="artwork-artist">Artist: Eva Joy</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+              </div>
+            </div>
+
+            <!-- Artwork Card 6 -->
+            <div class="swiper-slide">
+              <img
+                src="https://images.unsplash.com/photo-1536924940846-227afb31e2a5?w=500"
+                alt="Artwork 6"
+                class="artwork-image"
+              />
+              <div class="artwork-info">
+                <div class="artwork-title">Mixed Media Magic</div>
+                <div class="artwork-artist">Artist: Nidhi Sabhaya</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Artist Section -->
+      <section class="artist-section" id="artist">
         <div class="artist-top">
           <h2>Artists</h2>
           <p>Minds behind the masterpieces!</p>
         </div>
-        <div class="artistSlider-container">
-          <div class="artistSlider-track" id="artistSliderTrack">
-            <div class="artistSlider-slide">
-              <img src="images/eva-joy.png" alt="Artist 1" />
-            </div>
-            <div class="artistSlider-slide">
-              <img src="images/snehal-min.jpg" alt="Artist 2" />
-            </div>
 
-            <div class="artistSlider-slide">
-              <img src="images/ravindra-saravaiya.png" alt="Artist 3" />
-              <div class="name-box">Akash Bhoya</div>
+        <!-- Swiper Container -->
+        <div class="swiper artistSwiper">
+          <div class="swiper-wrapper">
+            <!-- Each Artist Card -->
+            <div class="swiper-slide">
+              <img
+                src="images/eva-joy.png"
+                class="img-fluid object-cover"
+                alt="Art 2"
+              />
+              <div class="name-box">Eva Joy</div>
             </div>
-            <div class="artistSlider-slide">
-              <img src="images/kumar-krishna.png" alt="Artist 4" />
-              <div class="name-box">Akash Bhoya</div>
+            <div class="swiper-slide">
+              <img
+                src="images/snehal-min.jpg"
+                class="img-fluid object-cover"
+                alt="Art 3"
+              />
+              <div class="name-box">Snehal Pradhan</div>
             </div>
-            <div class="artistSlider-slide">
-              <img src="images/nidhi-sabhaya.png" alt="Artist 4" />
-              <div class="name-box">Akash Bhoya</div>
+            <div class="swiper-slide">
+              <img
+                src="images/ravindra-saravaiya.png"
+                class="img-fluid object-cover"
+                alt="Art 4"
+              />
+              <div class="name-box">Ravindra Saravaiya</div>
             </div>
-            <div class="artistSlider-slide">
-              <img src="images/sneha-min.jpg" alt="Artist 4" />
-              <div class="name-box">Akash Bhoya</div>
+            <div class="swiper-slide">
+              <img
+                src="images/kumar-krishna.png"
+                class="img-fluid object-cover"
+                alt="Art 4"
+              />
+              <div class="name-box">Kumar Krishna</div>
             </div>
+            <div class="swiper-slide">
+              <img
+                src="images/nidhi-sabhaya.png"
+                class="img-fluid object-cover"
+                alt="Art 4"
+              />
+              <div class="name-box">Nidhi Sabhaya</div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="images/sneha-min.jpg"
+                class="img-fluid object-cover"
+                alt="Art 4"
+              />
+              <div class="name-box">Sneha Lakhotiya</div>
+            </div>
+          </div>
 
-            <div class="row g-3 row-equal">
-              <div class="col-lg-3">
+          <!-- Navigation + Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Event Section -->
+      <section class="eventscarusal-section" id="events">
+        <div class="eventscarusal-section-top">
+          <h2>Events</h2>
+          <p>Discover upcoming events / exhibitions!</p>
+        </div>
+
+        <!-- Swiper Container -->
+        <div class="swiper eventSwiper">
+          <div class="swiper-wrapper">
+            <!-- Each Event Card -->
+            <div class="swiper-slide">
+              <a href="events.html" style="text-decoration: none">
                 <img
-                  src="images/eva-joy.png"
+                  src="images/banner-1-1-min.png"
                   class="img-fluid object-cover"
-                  alt="Art 2"
+                  alt="Event 1"
                 />
-                <div class="name-box">Eva Joy</div>
-              </div>
-              <div class="col-lg-3">
+                <!-- <div class="name-box-event">Event 1</div> -->
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="events.html" style="text-decoration: none">
                 <img
-                  src="images/snehal-min.jpg"
+                  src="images/banner-1-1-min.png"
                   class="img-fluid object-cover"
+                  alt="Event 2"
+                />
+                <!-- <div class="name-box-event">Event 2</div> -->
+              </a>
+            </div>
+
+            <div class="swiper-slide">
+              <a href="events.html" style="text-decoration: none">
+                <img
+                  src="images/banner-1-1-min.png"
+                  class="img-fluid object-cover"
+                  alt="Event 3"
+                />
+                <!-- <div class="name-box-event">Event 3</div> -->
+              </a>
+            </div>
+          </div>
+
+          <!-- Pagination -->
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- Art Section -->
+      <section class="art-section" id="art" style="display: none">
+        <div class="art-top text-center mb-4">
+          <h2>Art Works</h2>
+          <p>Crafted with passion & creativity !</p>
+        </div>
+        <div class="container-fluid">
+          <!-- First Row: Single Full-Width Image -->
+          <div class="row art-row mb-3">
+            <div class="col-12">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-1-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 1"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Row: Three Images Side by Side -->
+          <div class="row g-3">
+            <div class="col-md-8">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-2-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 2"
+                  height="515px"
+                />
+              </div>
+            </div>
+            <div class="col-md-2">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-3-min.png"
+                  class="img-fluid art-img"
                   alt="Art 3"
                 />
-                <div class="name-box">Snehal Desai</div>
-              </div>
-              <div class="col-lg-3">
-                <img
-                  src="images/ravindra-saravaiya.png"
-                  class="img-fluid object-cover"
-                  alt="Art 4"
-                />
-                <div class="name-box">Ravindra Saravaiya</div>
-              </div>
-              <div class="col-lg-3">
-                <img
-                  src="images/kumar-krishna.png"
-                  class="img-fluid object-cover"
-                  alt="Art 4"
-                />
-                <div class="name-box">Kumar Krishna</div>
-              </div>
-              <div class="col-lg-3">
-                <img
-                  src="images/nidhi-sabhaya.png"
-                  class="img-fluid object-cover"
-                  alt="Art 4"
-                />
-                <div class="name-box">Nidhi Sabhaya</div>
-              </div>
-              <div class="col-lg-3">
-                <img
-                  src="images/sneha-min.jpg"
-                  class="img-fluid object-cover"
-                  alt="Art 4"
-                />
-                <div class="name-box">Sneha Desai</div>
               </div>
             </div>
-          
-          
-          </div>
-
-          <div class="artistSlider-dots" id="artistSliderDots"></div>
-        </div>
-      </section> -->
-
-    <!-- Art Section -->
-    <section class="art-section" id="art">
-      <div class="art-top text-center mb-4">
-        <h2>Art Works</h2>
-        <p>Crafted with passion & creativity !</p>
-      </div>
-      <div class="container-fluid">
-        <!-- First Row: Single Full-Width Image -->
-        <div class="row art-row mb-3">
-          <div class="col-12">
-            <div class="art-img-wrapper">
-              <img src="images/art-work-1-min.png" class="img-fluid art-img" alt="Art 1" />
+            <div class="col-md-2">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/art-work-4-min.png"
+                  class="img-fluid art-img"
+                  alt="Art 4"
+                />
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Second Row: Three Images Side by Side -->
-        <div class="row g-3">
-          <div class="col-md-8">
-            <div class="art-img-wrapper">
-              <img src="images/art-work-2-min.png" class="img-fluid art-img" alt="Art 2" height="515px" />
+      <!-- Events Section -->
+      <section class="art-section" id="event" style="display: none">
+        <div class="art-top">
+          <h2>Events</h2>
+          <p>Discover upcoming events / exhibitions!</p>
+        </div>
+        <div class="container-fluid">
+          <!-- First Row: Single Full-Width Image -->
+          <div class="row art-row">
+            <div class="col-12">
+              <div class="art-img-wrapper">
+                <img
+                  src="images/hero-4-min.png"
+                  class="img-fluid"
+                  alt="Art 1"
+                />
+              </div>
             </div>
           </div>
-          <div class="col-md-2">
-            <div class="art-img-wrapper">
-              <img src="images/art-work-3-min.png" class="img-fluid art-img" alt="Art 3" />
+
+          <!-- Second Row: Three Images Side by Side -->
+          <div class="row g-3 row-equal">
+            <div class="col-lg-3">
+              <img
+                src="images/akash-bhoya-min.jpg"
+                class="img-fluid object-cover"
+                alt="Art 2"
+              />
+              <div class="name-box">Akash Bhoya</div>
             </div>
-          </div>
-          <div class="col-md-2">
-            <div class="art-img-wrapper">
-              <img src="images/art-work-4-min.png" class="img-fluid art-img" alt="Art 4" />
+            <div class="col-lg-3">
+              <img
+                src="images/archana-singh-min.jpg"
+                class="img-fluid object-cover"
+                alt="Art 3"
+              />
+              <div class="name-box">Archana Singh</div>
+            </div>
+            <div class="col-lg-3">
+              <img
+                src="images/deepika-sakhat-min.jpg"
+                class="img-fluid object-cover"
+                alt="Art 4"
+              />
+              <div class="name-box">Deepika Sakhat</div>
+            </div>
+            <div class="col-lg-3">
+              <img
+                src="images/pratima-tandel-min.jpg"
+                class="img-fluid object-cover"
+                alt="Art 4"
+              />
+              <div class="name-box">Pratima Tandel</div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- About Us Section -->
-    <section class="about-us" id="about">
-      <div class="row">
-        <div class="about-img col-md-5 col-sm-12">
-          <img src="images/about-photo.png" class="img-fluid" />
+      <!-- Promotion Section -->
+      <section class="promotion-section" id="promo">
+        <div class="promo-top">
+          <h2>Promotions</h2>
+          <p>Curated to inspire & captivate!</p>
         </div>
-        <div class="about-content col-md-6 col-sm-12">
-          <img src="images/about_tag.png" class="img-fluid tag-img" />
+        <div class="promo-content">
+          <div class="art-img-wrapper">
+            <img src="images/neo-baroda.png" class="image-neo" />
+          </div>
           <h2>
-            Shaping the Future of Contemporary Art in India and the
-            Subcontinent!
-          </h2>
-          <p>
-            Gallery MOLD is a new art venue designed to amplify the voices of
-            young and emerging artists. Our platform is dedicated to providing
-            opportunities for up-and-coming practitioners to express their
-            vital ideas in today's world. We strive to create an environment
-            where artists can experiment, learn, and grow. By supporting young
-            artists at critical junctures in their careers, we aim to enrich
-            the cultural landscape and foster contemporary discourse.
-          </p>
-          <p>
-            Our curated exhibitions aim to inspire, challenge boundaries, and
-            stimulate new dialogue in the evolution of a contemporary artistic
-            era. We strive to connect emerging creators with the broader
-            community to cultivate a deeper appreciation for contemporary
-            practices.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Events Section -->
-    <section class="art-section" id="event">
-      <div class="art-top">
-        <h2>Events</h2>
-        <p>Discover upcoming events / exhibitions!</p>
-      </div>
-      <div class="container-fluid">
-        <!-- First Row: Single Full-Width Image -->
-        <div class="row art-row">
-          <div class="col-12">
-            <div class="art-img-wrapper">
-              <img src="images/hero-4-min.png" class="img-fluid" alt="Art 1" />
-            </div>
-          </div>
-        </div>
-
-        <!-- Second Row: Three Images Side by Side -->
-        <div class="row g-3 row-equal">
-          <div class="col-lg-3">
-            <img src="images/akash-bhoya-min.jpg" class="img-fluid object-cover" alt="Art 2" />
-            <div class="name-box">Akash Bhoya</div>
-          </div>
-          <div class="col-lg-3">
-            <img src="images/archana-singh-min.jpg" class="img-fluid object-cover" alt="Art 3" />
-            <div class="name-box">Archana Singh</div>
-          </div>
-          <div class="col-lg-3">
-            <img src="images/deepika-sakhat-min.jpg" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Deepika Sakhat</div>
-          </div>
-          <div class="col-lg-3">
-            <img src="images/pratima-tandel-min.jpg" class="img-fluid object-cover" alt="Art 4" />
-            <div class="name-box">Pratima Tandel</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Promotion Section -->
-    <section class="promotion-section" id="promo">
-      <div class="promo-top">
-        <h2>Promotions</h2>
-        <p>Curated to inspire & captivate!</p>
-      </div>
-      <div class="promo-content">
-        <div class="art-img-wrapper">
-          <img src="images/neo-baroda.png" class="image-neo" />
-        </div>
-        <h2>
-          Neo Baroda is an artistic community and collective that supports
-          writers and artists, promotes free
-        </h2>
-        <a href="#" class="text-center" style="color: blue" data-bs-toggle="modal" data-bs-target="#readMoreModal">read
-          more</a>
-      </div>
-    </section>
-    <div class="modal fade" id="readMoreModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true" style="z-index: 999999999">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLongTitle">Neo Baroda</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
             Neo Baroda is an artistic community and collective that supports
-            writers and artists, promotes free expression, and accommodates
-            students and young practitioners. A self-sufficient community with
-            autonomy, knowledge accessibility, and information distribution is
-            their goal. Through workshops, podcasts, animations, interviews,
-            and various happenings, they seek to collect, share, and
-            contextualize and recontextualize information within the
-            community, with the aspect of encouraging freedom of expression.
-            Establishing sustainable methods to foster a sense of community
-            among young artists, writers, curators, performers, designers, and
-            historians forms the core of their mission. This collaborative
-            setting promotes multidisciplinary development, resource sharing,
-            and equitable idea growth in the community. Their active
-            engagement on social media reflects their cultural environment to
-            improve understanding in creative sectors.
-          </div>
-          <!-- <div class="modal-footer">
+            writers and artists, promotes free
+          </h2>
+          <a
+            href="#"
+            class="text-center"
+            style="color: blue"
+            data-bs-toggle="modal"
+            data-bs-target="#readMoreModal"
+            >read more</a
+          >
+        </div>
+      </section>
+      <div
+        class="modal fade"
+        id="readMoreModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true"
+        style="z-index: 999999999"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Neo Baroda</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Neo Baroda is an artistic community and collective that supports
+              writers and artists, promotes free expression, and accommodates
+              students and young practitioners. A self-sufficient community with
+              autonomy, knowledge accessibility, and information distribution is
+              their goal. Through workshops, podcasts, animations, interviews,
+              and various happenings, they seek to collect, share, and
+              contextualize and recontextualize information within the
+              community, with the aspect of encouraging freedom of expression.
+              Establishing sustainable methods to foster a sense of community
+              among young artists, writers, curators, performers, designers, and
+              historians forms the core of their mission. This collaborative
+              setting promotes multidisciplinary development, resource sharing,
+              and equitable idea growth in the community. Their active
+              engagement on social media reflects their cultural environment to
+              improve understanding in creative sectors.
+            </div>
+            <!-- <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary">Save changes</button>
           </div> -->
-        </div>
-      </div>
-    </div>
-    <section class="artist-section" id="artist">
-      <div class="artist-top">
-        <h2>Art that Connects</h2>
-        <p>Stay connected Stay inspired</p>
-        <button class="artist-btn">Connect with Us</button>
-      </div>
-    </section>
-
-    <footer class="footer-section" id="contact">
-      <div class="row footer-top">
-        <div class="col-lg-3 mb-4">
-          <img src="images/mold-footer-logo.png" alt="Gallery Mold Logo" class="mb-3 footer-logo"
-            style="max-width: 150px" />
-          <p class="footer-text">
-            Explores the aesthetic and conceptual dimensions of modern times,
-            bridging innovative practices.
-          </p>
-        </div>
-
-        <div class="col-lg-3 mb-4 sitemap">
-          <h5 class="footer-heading"><span>s</span>ite map</h5>
-          <ul class="list-unstyled">
-            <li><a href="#art">ART WORKS</a></li>
-            <li><a href="#artist">ARTISTS</a></li>
-            <li><a href="#promo">PROMOTIONS</a></li>
-            <li><a href="#event">EVENTS</a></li>
-            <li><a href="contact.html">CONTACT</a></li>
-          </ul>
-        </div>
-
-        <div class="col-lg-3 mb-4">
-          <h5 class="footer-heading"><span>c</span>ontact</h5>
-          <p style="margin-bottom: 0">
-            <a href="mailto:thegallerymold@gmail.com">thegallerymold@gmail.com</a>
-          </p>
-          <p><a href="tel:+919925111805">+91 9925111805</a></p>
-        </div>
-
-        <div class="col-lg-3 address">
-          <h5 class="footer-heading"><span>a</span>ddress</h5>
-          <p>
-            Ground Floor, Naman House, Race Course,<br />Vadodara, Gujarat
-            390007
-          </p>
-          <a href="https://g.co/kgs/Zw49HVQ" target="_blank">GET DIRECTION</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom text-center py-3">
-        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-          <p class="mb-2 mb-md-0">
-            © Gallery Mold. Developed by
-            <a href="" target="_blank" style="font-size: 0.9vw" class="diwizon">Diwizon.</a>
-          </p>
-          <div class="footer-social">
-            <a href="https://www.instagram.com/the_gallerymold/" target="_blank"><img src="images/instagram.svg"
-                alt="Instagram" class="social-icon" /></a>
-            <a href="#"><img src="images/linkedin.svg" alt="LinkedIn" class="social-icon" /></a>
           </div>
         </div>
       </div>
-    </footer>
-  </main>
-  <script>
-    function showLoaderAndRedirect(url) {
-      const loader = document.getElementById("loader");
-      if (loader) {
-        loader.style.display = "flex";
-        loader.style.visibility = "visible";
-      }
+      <section class="artist-section" id="artist">
+        <div class="artist-top">
+          <h2>Art that Connects</h2>
+          <p>Stay connected Stay inspired</p>
+          <button class="artist-btn">Connect with Us</button>
+        </div>
+      </section>
 
-      // Optional delay for loader to appear
-      setTimeout(() => {
-        window.location.href = url;
-      }, 100);
-    }
+      <footer class="footer-section" id="contact">
+        <div class="row footer-top">
+          <div class="col-lg-3 mb-4">
+            <img
+              src="images/mold-footer-logo.png"
+              alt="Gallery Mold Logo"
+              class="mb-3 mt-3 footer-logo"
+              style="max-width: 150px"
+            />
+            <p class="footer-text">
+              Explores the aesthetic and conceptual dimensions of modern times,
+              bridging innovative practices.
+            </p>
+          </div>
 
-    document.addEventListener("DOMContentLoaded", () => {
-      const loader = document.getElementById("loader");
-      if (loader) {
-        loader.style.display = "flex";
-        loader.style.visibility = "visible";
-      }
+          <div class="col-lg-3 mb-4 sitemap">
+            <h5 class="footer-heading"><span>s</span>ite map</h5>
+            <ul class="list-unstyled">
+              <li><a href="#art">ART WORKS</a></li>
+              <li><a href="#artist">ARTISTS</a></li>
+              <li><a href="#promo">PROMOTIONS</a></li>
+              <li><a href="#event">EVENTS</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
 
-      // Simulated page loading time
-      setTimeout(() => {
+          <div class="col-lg-3 mb-4">
+            <h5 class="footer-heading"><span>c</span>ontact</h5>
+            <p style="margin-bottom: 0">
+              <a href="mailto:thegallerymold@gmail.com"
+                >thegallerymold@gmail.com</a
+              >
+            </p>
+            <p><a href="tel:+919925111805">+91 9925111805</a></p>
+          </div>
+
+          <div class="col-lg-3 address">
+            <h5 class="footer-heading"><span>a</span>ddress</h5>
+            <p>
+              Ground Floor, Naman House, Race Course,<br />Vadodara, Gujarat
+              390007
+            </p>
+            <a href="https://g.co/kgs/Zw49HVQ" target="_blank">GET DIRECTION</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom text-center py-3">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <p class="mb-2 mb-md-0">
+              © Gallery Mold. Developed by
+              <a
+                href=""
+                target="_blank"
+                style="font-size: 0.9vw"
+                class="diwizon"
+                >Diwizon.</a
+              >
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.instagram.com/the_gallerymold/"
+                target="_blank"
+                ><img
+                  src="images/instagram.svg"
+                  alt="Instagram"
+                  class="social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/linkedin.svg"
+                  alt="LinkedIn"
+                  class="social-icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script>
+      function showLoaderAndRedirect(url) {
+        const loader = document.getElementById("loader");
         if (loader) {
-          loader.style.display = "none";
+          loader.style.display = "flex";
+          loader.style.visibility = "visible";
         }
-      }, 2000);
 
-      // Check redirect condition on initial load
-    });
-  </script>
-  <script>
-    const slides = document.querySelectorAll(".carousel-slide");
-    const dots = document.querySelectorAll(".dot");
-    const leftBtn = document.querySelector(".arrow.left");
-    const rightBtn = document.querySelector(".arrow.right");
-    let index = 0;
+        // Optional delay for loader to appear
+        setTimeout(() => {
+          window.location.href = url;
+        }, 100);
+      }
 
-    function showSlide(i) {
-      slides.forEach((slide, idx) => {
-        slide.classList.toggle("active", idx === i);
-        dots[idx].classList.toggle("active", idx === i);
+      document.addEventListener("DOMContentLoaded", () => {
+        const loader = document.getElementById("loader");
+        if (loader) {
+          loader.style.display = "flex";
+          loader.style.visibility = "visible";
+        }
+
+        // Simulated page loading time
+        setTimeout(() => {
+          if (loader) {
+            loader.style.display = "none";
+          }
+        }, 2000);
+
+        // Check redirect condition on initial load
       });
-    }
+    </script>
+    <script>
+      const slides = document.querySelectorAll(".carousel-slide");
+      const dots = document.querySelectorAll(".dot");
+      const leftBtn = document.querySelector(".arrow.left");
+      const rightBtn = document.querySelector(".arrow.right");
+      let index = 0;
 
-    leftBtn.addEventListener("click", () => {
-      index = (index - 1 + slides.length) % slides.length;
-      showSlide(index);
-    });
+      function showSlide(i) {
+        slides.forEach((slide, idx) => {
+          slide.classList.toggle("active", idx === i);
+          dots[idx].classList.toggle("active", idx === i);
+        });
+      }
 
-    rightBtn.addEventListener("click", () => {
-      index = (index + 1) % slides.length;
-      showSlide(index);
-    });
-
-    dots.forEach((dot, idx) => {
-      dot.addEventListener("click", () => {
-        index = idx;
+      leftBtn.addEventListener("click", () => {
+        index = (index - 1 + slides.length) % slides.length;
         showSlide(index);
       });
-    });
-  </script>
 
-  <script>
-    const artistSlider = document.getElementById("artistSliderTrack");
-    const artistSliderDotsContainer =
-      document.getElementById("artistSliderDots");
-    const artistSliderSlides = document.querySelectorAll(
-      ".artistSlider-slide"
-    );
-
-    let isDown = false;
-    let startX;
-    let scrollLeft;
-
-    // Drag-to-scroll
-    artistSlider.addEventListener("mousedown", (e) => {
-      isDown = true;
-      startX = e.pageX - artistSlider.offsetLeft;
-      scrollLeft = artistSlider.scrollLeft;
-    });
-
-    artistSlider.addEventListener("mouseleave", () => {
-      isDown = false;
-    });
-    artistSlider.addEventListener("mouseup", () => {
-      isDown = false;
-    });
-
-    artistSlider.addEventListener("mousemove", (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - artistSlider.offsetLeft;
-      const walk = (x - startX) * 2;
-      artistSlider.scrollLeft = scrollLeft - walk;
-    });
-
-    // Helper to calculate how many slides are visible per view
-    function getVisibleSlides() {
-      const slideWidth = artistSliderSlides[0].getBoundingClientRect().width;
-      return Math.floor(artistSlider.offsetWidth / slideWidth);
-    }
-
-    // Render dots based on visible slides
-    function renderArtistSliderDots() {
-      artistSliderDotsContainer.innerHTML = "";
-      const visibleSlides = getVisibleSlides();
-      const totalDots = Math.ceil(artistSliderSlides.length / visibleSlides);
-
-      for (let i = 0; i < totalDots; i++) {
-        const dot = document.createElement("div");
-        dot.classList.add("artistSlider-dot");
-        if (i === 0) dot.classList.add("active");
-        dot.addEventListener("click", () => {
-          const scrollAmount = i * artistSlider.offsetWidth;
-          artistSlider.scrollTo({
-            left: scrollAmount,
-            behavior: "smooth",
-          });
-        });
-        artistSliderDotsContainer.appendChild(dot);
-      }
-    }
-
-    // Update active dot
-    function updateArtistSliderDots() {
-      const index = Math.round(
-        artistSlider.scrollLeft / artistSlider.offsetWidth
-      );
-      document.querySelectorAll(".artistSlider-dot").forEach((dot, i) => {
-        dot.classList.toggle("active", i === index);
+      rightBtn.addEventListener("click", () => {
+        index = (index + 1) % slides.length;
+        showSlide(index);
       });
-    }
 
-    // Initial load
-    renderArtistSliderDots();
+      dots.forEach((dot, idx) => {
+        dot.addEventListener("click", () => {
+          index = idx;
+          showSlide(index);
+        });
+      });
+    </script>
 
-    // Recalculate on window resize
-    window.addEventListener("resize", renderArtistSliderDots);
+    <script>
+      const artistSlider = document.getElementById("artistSliderTrack");
+      const artistSliderDotsContainer =
+        document.getElementById("artistSliderDots");
+      const artistSliderSlides = document.querySelectorAll(
+        ".artistSlider-slide"
+      );
 
-    // Sync active dot on scroll
-    artistSlider.addEventListener("scroll", updateArtistSliderDots);
-  </script>
-  <script>
-    window.onload = () => {
-      const popup = document.getElementById("popup");
-      const closeBtn = document.getElementById("closeBtn");
+      let isDown = false;
+      let startX;
+      let scrollLeft;
 
-      // Wait 5 seconds before showing the popup
-      setTimeout(() => {
-        popup.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }, 5000); // 5000ms = 5 seconds
+      // Drag-to-scroll
+      artistSlider.addEventListener("mousedown", (e) => {
+        isDown = true;
+        startX = e.pageX - artistSlider.offsetLeft;
+        scrollLeft = artistSlider.scrollLeft;
+      });
 
-      // Close on close button
-      closeBtn.onclick = () => {
-        popup.style.display = "none";
-        document.body.style.overflow = "auto";
-      };
+      artistSlider.addEventListener("mouseleave", () => {
+        isDown = false;
+      });
+      artistSlider.addEventListener("mouseup", () => {
+        isDown = false;
+      });
 
-      // Close when clicking outside modal
-      popup.onclick = (e) => {
-        if (e.target === popup) {
+      artistSlider.addEventListener("mousemove", (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - artistSlider.offsetLeft;
+        const walk = (x - startX) * 2;
+        artistSlider.scrollLeft = scrollLeft - walk;
+      });
+
+      // Helper to calculate how many slides are visible per view
+      function getVisibleSlides() {
+        const slideWidth = artistSliderSlides[0].getBoundingClientRect().width;
+        return Math.floor(artistSlider.offsetWidth / slideWidth);
+      }
+
+      // Render dots based on visible slides
+      function renderArtistSliderDots() {
+        artistSliderDotsContainer.innerHTML = "";
+        const visibleSlides = getVisibleSlides();
+        const totalDots = Math.ceil(artistSliderSlides.length / visibleSlides);
+
+        for (let i = 0; i < totalDots; i++) {
+          const dot = document.createElement("div");
+          dot.classList.add("artistSlider-dot");
+          if (i === 0) dot.classList.add("active");
+          dot.addEventListener("click", () => {
+            const scrollAmount = i * artistSlider.offsetWidth;
+            artistSlider.scrollTo({
+              left: scrollAmount,
+              behavior: "smooth",
+            });
+          });
+          artistSliderDotsContainer.appendChild(dot);
+        }
+      }
+
+      // Update active dot
+      function updateArtistSliderDots() {
+        const index = Math.round(
+          artistSlider.scrollLeft / artistSlider.offsetWidth
+        );
+        document.querySelectorAll(".artistSlider-dot").forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      }
+
+      // Initial load
+      renderArtistSliderDots();
+
+      // Recalculate on window resize
+      window.addEventListener("resize", renderArtistSliderDots);
+
+      // Sync active dot on scroll
+      artistSlider.addEventListener("scroll", updateArtistSliderDots);
+    </script>
+    <script>
+      window.onload = () => {
+        const popup = document.getElementById("popup");
+        const closeBtn = document.getElementById("closeBtn");
+
+        // Wait 5 seconds before showing the popup
+        setTimeout(() => {
+          popup.style.display = "flex";
+          document.body.style.overflow = "hidden";
+        }, 5000); // 5000ms = 5 seconds
+
+        // Close on close button
+        closeBtn.onclick = () => {
           popup.style.display = "none";
           document.body.style.overflow = "auto";
-        }
+        };
+
+        // Close when clicking outside modal
+        popup.onclick = (e) => {
+          if (e.target === popup) {
+            popup.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        };
       };
-    };
-  </script>
+    </script>
 
-  <script>
-    $("#readMoreModal").on("show.bs.modal", function () {
-      $("body").addClass("modal-open");
-    });
-
-    $("#readMoreModal").on("hidden.bs.modal", function () {
-      $("body").removeClass("modal-open");
-    });
-  </script>
-  <script>
-    const toggleBtn = document.getElementById("toggleBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    const mobileNavbar = document.querySelector(".mobile-navbar");
-    const menuLinks = mobileMenu.querySelectorAll("a"); // Select all anchor tags inside mobileMenu
-
-    let isOpen = false;
-
-    toggleBtn.addEventListener("click", () => {
-      isOpen = !isOpen;
-      if (isOpen) {
-        mobileMenu.style.right = "0";
-        mobileNavbar.style.display = "none";
-      } else {
-        mobileMenu.style.right = "-100%";
-        mobileNavbar.style.display = "flex";
-      }
-    });
-
-    // Close the menu when any link is clicked
-    menuLinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        isOpen = false;
-        mobileMenu.style.right = "-100%";
-        mobileNavbar.style.display = "flex";
+    <script>
+      $("#readMoreModal").on("show.bs.modal", function () {
+        $("body").addClass("modal-open");
       });
-    });
-  </script>
 
-  <script>
-    var swiper = new Swiper(".artistSwiper", {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        320: { slidesPerView: 2 },
-        576: { slidesPerView: 2 },
-        768: { slidesPerView: 3 },
-        992: { slidesPerView: 4 },
-      },
-    }); var swiper = new Swiper(".eventSwiper", {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        320: { slidesPerView: 1 },
-        576: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        992: { slidesPerView: 3 },
-      },
-    });
-  </script>
-</body>
+      $("#readMoreModal").on("hidden.bs.modal", function () {
+        $("body").removeClass("modal-open");
+      });
+    </script>
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileNavbar = document.querySelector(".mobile-navbar");
+      const menuLinks = mobileMenu.querySelectorAll("a"); // Select all anchor tags inside mobileMenu
 
+      let isOpen = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isOpen = !isOpen;
+        if (isOpen) {
+          mobileMenu.style.right = "0";
+          mobileNavbar.style.display = "none";
+        } else {
+          mobileMenu.style.right = "-100%";
+          mobileNavbar.style.display = "flex";
+        }
+      });
+
+      // Close the menu when any link is clicked
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          isOpen = false;
+          mobileMenu.style.right = "-100%";
+          mobileNavbar.style.display = "flex";
+        });
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".artistSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+        breakpoints: {
+          320: { slidesPerView: 2 },
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 },
+        },
+      });
+      var swiper = new Swiper(".eventSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+        breakpoints: {
+          320: { slidesPerView: 1 },
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 3 },
+        },
+      });
+
+      // Initialize Artwork Swiper
+      const artworkSwiper = new Swiper(".artworkSwiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

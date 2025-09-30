@@ -1,3 +1,6 @@
+/* ============================================
+   GLOBAL RESET & BASE STYLES
+   ============================================ */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +15,6 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
-  /* height of your sticky header */
 }
 
 ul {
@@ -23,7 +25,9 @@ li {
   list-style: none;
 }
 
-/* === Top Navbar === */
+/* ============================================
+   TOP NAVBAR STYLES
+   ============================================ */
 .top-navbar {
   position: fixed;
   top: 0;
@@ -48,6 +52,12 @@ li {
 
 .top-left img {
   width: 28px;
+}
+
+.top-center .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-center .logo img {
@@ -77,30 +87,18 @@ li {
   line-height: 1.2;
 }
 
-/* === Left Sidebar === */
+/* ============================================
+   LEFT SIDEBAR NAVIGATION
+   ============================================ */
 .left-sidebar {
   position: fixed;
   top: 60px;
   left: 0;
-  width: 60px;
-  height: calc(100vh - 60px);
   width: 5.49vw;
   height: 90%;
   background: #f3f3f3;
   border-right: 1px solid #ddd;
-}
-
-/* Left Sidebar */
-.left-sidebar {
-  position: fixed;
-  top: 60px;
-  left: 0;
-  width: 60px;
-  height: calc(100vh - 60px);
-  width: 5.49vw;
-  height: 90%;
-  background: #f3f3f3;
-  border-right: 1px solid #ddd;
+  z-index: 999;
 }
 
 .left-sidebar ul {
@@ -112,7 +110,6 @@ li {
 .left-sidebar ul li {
   flex: 1;
   min-height: 80px;
-  /* Minimum height for each item */
 }
 
 .left-sidebar a {
@@ -131,7 +128,6 @@ li {
   padding: 0 1.5vw;
 }
 
-
 .link-1:hover {
   background: #ebb762;
 }
@@ -148,15 +144,18 @@ li {
   background: #407a93;
 }
 
-/* === Main Content === */
+/* ============================================
+   MAIN CONTENT AREA
+   ============================================ */
 .main-content {
   margin-left: 6.49vw;
   margin-top: 80px;
   width: calc(100% - 6.49vw);
 }
 
-/* banner slider */
-/* Carousel container matches image height */
+/* ============================================
+   HERO BANNER CAROUSEL
+   ============================================ */
 .custom-carousel {
   position: relative;
   width: 100%;
@@ -164,7 +163,6 @@ li {
   flex-direction: column;
 }
 
-/* Show only active slide */
 .carousel-slide {
   display: none;
   width: 100%;
@@ -175,7 +173,6 @@ li {
   display: block;
 }
 
-/* Image sizing */
 .img-fluid {
   width: 100%;
   height: auto;
@@ -185,10 +182,8 @@ li {
 
 .carousel-slide:hover .img-fluid {
   transform: scale(1.05);
-  /* Slight zoom on hover */
 }
 
-/* Arrows - position relative to image */
 .arrow {
   position: absolute;
   top: 50%;
@@ -210,7 +205,6 @@ li {
   right: 10px;
 }
 
-/* Dots at bottom of image */
 .carousel-dots {
   display: flex;
   justify-content: center;
@@ -225,15 +219,24 @@ li {
   border-radius: 50%;
   display: inline-block;
   transition: background 0.3s ease;
+  cursor: pointer;
 }
 
 .carousel-dots .dot.active {
   background-color: #333;
 }
 
-/* artist section */
+/* ============================================
+   ARTIST SECTION
+   ============================================ */
 .artist-section {
-  margin-top: 50px;
+  margin-top: 80px;
+  padding: 0 0.5vw;
+}
+
+.artist-top {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .artist-top h2 {
@@ -241,23 +244,20 @@ li {
   line-height: 1;
   letter-spacing: -0.115vw;
   font-family: "Barlow Semi Condensed", sans-serif;
-  text-align: center;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .artist-top p {
   font-size: 2.049vw;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
-  text-align: center;
   margin-top: 10px;
 }
 
 .artist-btn {
   display: inline-block;
-  /* make button behave inline */
   margin-top: 20px;
-  /* spacing below p */
   padding: 10px 25px;
   font-size: 1rem;
   font-family: "Barlow", sans-serif;
@@ -273,83 +273,29 @@ li {
   background-color: #444;
 }
 
-/* center the button inside artist-top */
-.artist-top {
+/* Artist Swiper */
+.artistSwiper {
+  padding: 20px 0 40px;
+}
+
+.artistSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
   text-align: center;
 }
-
-
-.artistSlider-container {
-  position: relative;
-  max-width: 100%;
-  overflow: hidden;
-  padding: 40px 0 0;
+.artistSwiper .swiper-pagination-bullet {
+  background: #111;
+  opacity: 0.3;
 }
-
-.artistSlider-track {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 0 20px;
-  cursor: grab;
+.artistSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
 }
-
-.artistSlider-track::-webkit-scrollbar {
-  display: none;
-}
-
-.artistSlider-slide {
-  flex: 0 0 calc((100% - 20px) / 4);
-  /* 4 slides with 20px gaps */
-  height: auto;
-  scroll-snap-align: center;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.artistSlider-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
-
-.artistSlider-slide img:hover {
-  transform: scale(1.03);
-}
-
-.artistSlider-dots {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-  gap: 8px;
-}
-
-.artistSlider-dot {
-  width: 10px;
-  height: 10px;
-  background: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.artistSlider-dot.active {
-  background: #000;
-}
-
-@media (max-width: 768px) {
-  .artistSlider-slide {
-    flex: 0 0 calc((100% - 20px) / 2);
-    /* 2 slides with 20px gap */
-  }
-}
-
-/* art section */
+/* ============================================
+   ART WORKS SECTION
+   ============================================ */
 .art-section {
-  margin-top: 50px;
+  margin-top: 80px;
+  /* padding: 0 2.5vw; */
 }
 
 .art-section .col-md-8 {
@@ -360,20 +306,24 @@ li {
   width: 20%;
 }
 
+.art-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .art-top h2 {
   font-size: 2.489vw;
   line-height: 1;
   letter-spacing: -0.115vw;
   font-family: "Barlow Semi Condensed", sans-serif;
-  text-align: center;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .art-top p {
   font-size: 2.049vw;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
-  text-align: center;
   margin-top: 10px;
 }
 
@@ -397,15 +347,9 @@ li {
   }
 }
 
-.row-equal>div {
+.row-equal > div {
   display: flex;
   flex-direction: column;
-}
-
-@media (max-width: 768px) {
-  .row-equal>div {
-    margin-bottom: 10px;
-  }
 }
 
 .art-img-wrapper {
@@ -421,11 +365,9 @@ li {
   object-fit: cover;
 }
 
-.art-img-wrapper:hover .art-img {
-  transform: scale(1.05);
-}
-
-.art-img-wrapper:hover .img-fluid {
+.art-img-wrapper:hover .art-img,
+.art-img-wrapper:hover .img-fluid,
+.art-img-wrapper:hover .image-neo {
   transform: scale(1.05);
 }
 
@@ -433,14 +375,12 @@ li {
   transition: transform 0.5s ease;
 }
 
-.art-img-wrapper:hover .image-neo {
-  transform: scale(1.05);
-}
-
-/* aboutus section */
-
+/* ============================================
+   ABOUT US SECTION
+   ============================================ */
 .about-us {
-  margin-top: 50px;
+  margin-top: 80px;
+  /* padding: 0 2.5vw; */
 }
 
 .about-us .row {
@@ -474,7 +414,319 @@ li {
   margin-top: 30px;
 }
 
-/* event section */
+/* ============================================
+   MISSION/VISION SECTION
+   ============================================ */
+.mission-vision-section {
+  margin-top: 80px;
+  padding: 0 0.5vw;
+}
+
+.mission-vision-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mission-vision-header h2 {
+  font-size: 2.489vw;
+  line-height: 1;
+  letter-spacing: -0.115vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.mission-vision-header p {
+  font-size: 2.049vw;
+  font-weight: 300;
+  color: #666;
+  margin-top: 10px;
+}
+
+.mission-vision-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.mission-box,
+.vision-box {
+  background: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-box:hover,
+.vision-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #ebb762;
+}
+
+.vision-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: #407a93;
+}
+
+.mission-box h3,
+.vision-box h3 {
+  font-size: 2vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.mission-box p,
+.vision-box p {
+  font-size: 1.171vw;
+  line-height: 1.8;
+  color: #444;
+  font-weight: 300;
+}
+
+/* ============================================
+   ARTWORK SLIDER SECTION
+   ============================================ */
+
+/* Artwork Slider Section */
+.artwork-slider-section {
+  margin-top: 50px;
+}
+
+.artwork-slider-header {
+  text-align: center;
+  /* margin-bottom: 40px; */
+}
+
+.artwork-slider-header h2 {
+  font-size: 2.489vw;
+  line-height: 1;
+  letter-spacing: -0.115vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.artwork-slider-header p {
+  font-size: 2.049vw;
+  font-weight: 300;
+  color: #666;
+}
+
+.artwork-slider-header .view-all {
+  float: right;
+  font-size: 1.2vw;
+  color: #111;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* Swiper Styles */
+.artworkSwiper {
+  padding: 20px 0 60px;
+}
+
+.artworkSwiper .swiper-slide {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artworkSwiper .swiper-slide:hover {
+  transform: translateY(-10px);
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); */
+}
+
+.artwork-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.artworkSwiper .swiper-slide:hover .artwork-image {
+  transform: scale(1.05);
+}
+
+.artwork-info {
+  padding: 20px;
+}
+
+.artwork-title {
+  font-size: 1.2vw;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 8px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.artwork-artist {
+  font-size: 1vw;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.buy-now-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background: #111;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9vw;
+  transition: background 0.3s ease;
+  border: 1px solid #111;
+}
+
+.buy-now-btn:hover {
+  background: #333;
+}
+
+/* Swiper Navigation */
+.artworkSwiper .swiper-button-next,
+.artworkSwiper .swiper-button-prev {
+  color: #111;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.artworkSwiper .swiper-button-next:after,
+.artworkSwiper .swiper-button-prev:after {
+  font-size: 20px;
+}
+
+.artworkSwiper .swiper-pagination-bullet {
+  background: #111;
+  opacity: 0.3;
+}
+.artworkSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.artworkSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+/* ============================================
+   EVENT SECTION
+   ============================================ */
+.eventscarusal-section {
+  margin-top: 80px;
+  padding: 0 0.5vw;
+}
+
+.eventscarusal-section-top {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.eventscarusal-section-top h2 {
+  font-size: 2.489vw;
+  line-height: 1;
+  letter-spacing: -0.115vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.eventscarusal-section-top p {
+  font-size: 2.049vw;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.eventSwiper {
+  padding: 20px 0 40px;
+}
+
+.eventSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.eventSwiper .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.eventSwiper .swiper-slide:hover {
+  transform: translateY(-5px);
+}
+
+.eventSwiper .swiper-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.eventSwiper .swiper-slide:hover img {
+  transform: scale(1.05);
+}
+
+.eventSwiper .swiper-slide .name-box-event {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  opacity: 1;
+  font-size: 1.171vw;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+}
+
+.eventSwiper .swiper-slide:hover .name-box-event {
+  bottom: -40px;
+  opacity: 0;
+}
+
+.eventSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+.eventSwiper .swiper-pagination-bullet {
+  background: #111;
+  opacity: 0.3;
+}
+.eventSwiper .swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
 .name-box {
   padding: 1.2vw 1.5vw;
   color: #fff;
@@ -484,9 +736,17 @@ li {
   background-color: #062b3b;
 }
 
-/* promotion section */
+/* ============================================
+   PROMOTION SECTION
+   ============================================ */
 .promotion-section {
-  margin-top: 50px;
+  margin-top: 80px;
+  padding: 0 2.5vw;
+}
+
+.promo-top {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .promo-top h2 {
@@ -494,15 +754,14 @@ li {
   line-height: 1;
   letter-spacing: -0.115vw;
   font-family: "Barlow Semi Condensed", sans-serif;
-  text-align: center;
   font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .promo-top p {
   font-size: 2.049vw;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
-  text-align: center;
   margin-top: 10px;
 }
 
@@ -531,13 +790,15 @@ li {
   margin: 0 auto;
 }
 
-/* footer  */
+/* ============================================
+   FOOTER SECTION
+   ============================================ */
 .footer-section {
   background-color: #111;
   color: #aaa;
   padding: 2.5vw 2.5vw 1vw;
   font-family: "Barlow Condensed", sans-serif;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .footer-section a {
@@ -548,6 +809,7 @@ li {
   text-transform: uppercase;
   font-weight: 300;
   text-decoration: none;
+  transition: opacity 0.3s ease;
 }
 
 .footer-section a:hover {
@@ -614,7 +876,9 @@ li {
   vertical-align: middle;
 }
 
-/* Mobile navbar */
+/* ============================================
+   MOBILE NAVBAR
+   ============================================ */
 .mobile-navbar {
   display: none !important;
   position: fixed;
@@ -624,7 +888,6 @@ li {
   background-color: white;
   z-index: 1000;
   padding: 0 16px;
-  display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
@@ -639,7 +902,6 @@ li {
   cursor: pointer;
 }
 
-/* Mobile menu drawer */
 .mobile-menu {
   position: fixed;
   top: 0;
@@ -713,15 +975,11 @@ li {
   text-decoration: none;
 }
 
-/* responsive  */
-@media (max-width: 1280px) {}
+/* ============================================
+   RESPONSIVE STYLES - TABLET & MOBILE
+   ============================================ */
 
-@media (max-width: 1180px) {}
-
-@media (max-width: 1180px) {}
-
-@media (max-width: 991px) {}
-
+/* Tablet & Small Desktop (870px and below) */
 @media (max-width: 870px) {
   .left-sidebar {
     display: none;
@@ -741,60 +999,104 @@ li {
   }
 }
 
+/* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
-  .artistSlider-track {
-    gap: 10px;
+  /* Banner Carousel */
+  /* Banner Carousel - Increased Height for Mobile */
+  .banner-slide {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .carousel-slide {
+    min-height: 400px;
+    display: none !important;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .carousel-slide.active {
+    display: flex !important;
+  }
+
+  .carousel-slide .img-fluid {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   .arrow img {
     width: 50%;
-  }
-
-  .arrow {
-    top: 35%;
+    filter: brightness(0) invert(1);
   }
 
   .arrow.left {
-    left: 0;
+    left: 10px;
   }
 
   .arrow.right {
-    right: 0;
+    right: 10px;
   }
 
-  .artist-section {
-    margin-top: 25px;
+  .carousel-dots {
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
   }
 
+  /* Section Spacing */
+  .artist-section,
+  .art-section,
+  .about-us,
+  .mission-vision-section,
+  .artwork-slider-section,
+  .eventscarusal-section,
+  .promotion-section,
+  .footer-section {
+    margin-top: 50px;
+    padding: 0 4vw;
+  }
+
+  /* Typography */
+  h2 {
+    font-size: 6vw !important;
+  }
+
+  p {
+    font-size: 4vw !important;
+  }
+
+  /* Artist Section */
   .artist-top p {
     margin: 0;
   }
 
-  .artistSlider-container {
-    padding: 25px 0 0;
-  }
-
+  /* Art Section */
   .art-img {
     height: auto !important;
     width: 100%;
   }
 
-  .art-section {
-    margin-top: 25px;
-  }
-
-  .art-section .col-md-8 {
-    width: 100%;
-  }
-
+  .art-section .col-md-8,
   .art-section .col-md-2 {
     width: 100%;
   }
 
-  .about-us {
-    margin-top: 25px;
-  }
-
+  /* About Us Section */
   .about-us .row {
     flex-wrap: wrap;
     flex-direction: column-reverse;
@@ -818,19 +1120,86 @@ li {
     max-width: 100%;
   }
 
+  .col-md-5,
+  .col-md-6 {
+    width: 100% !important;
+  }
+
+  /* Mission/Vision Section */
+  .mission-vision-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mission-box,
+  .vision-box {
+    padding: 30px 20px;
+  }
+
+  .mission-box h3,
+  .vision-box h3 {
+    font-size: 5.5vw;
+    margin-bottom: 15px;
+  }
+
+  .mission-box p,
+  .vision-box p {
+    font-size: 3.8vw;
+    line-height: 1.6;
+  }
+
+  /* Artwork Slider Section */
+  .artwork-slider-header .view-all {
+    position: static;
+    display: block;
+    margin-top: 10px;
+    font-size: 3.5vw;
+  }
+
+  .artwork-image {
+    height: 220px;
+  }
+
+  .artwork-title {
+    font-size: 4.2vw;
+  }
+
+  .artwork-artist {
+    font-size: 3.5vw;
+  }
+
+  .buy-now-btn {
+    font-size: 3.5vw;
+    padding: 6px 16px;
+  }
+
+  .artworkSwiper .swiper-button-next,
+  .artworkSwiper .swiper-button-prev {
+    width: 35px;
+    height: 35px;
+  }
+
+  .artworkSwiper .swiper-button-next:after,
+  .artworkSwiper .swiper-button-prev:after {
+    font-size: 16px;
+  }
+
+  /* Event Section */
+  .eventSwiper .swiper-slide img {
+    height: 220px;
+  }
+
+  .eventSwiper .swiper-slide .name-box-event {
+    font-size: 3.5vw;
+  }
+
   .name-box {
     padding: 15px;
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 
-  .promotion-section {
-    margin-top: 25px;
-  }
-
-  .promo-top h2 {
-    margin-bottom: 0;
-  }
-
+  /* Promotion Section */
+  .promo-top h2,
   .promo-top p {
     margin-bottom: 0;
   }
@@ -847,33 +1216,28 @@ li {
 
   .promo-content h2 {
     margin: 10px auto;
-    font-size: 5vw;
+    font-size: 4.5vw;
     max-width: 80%;
   }
 
   .promo-content a {
-    font-size: 4vw;
+    font-size: 3.8vw;
   }
 
-  h2 {
-    font-size: 5vw !important;
-  }
-
-  p {
-    font-size: 4vw !important;
-  }
-
+  /* Footer Section */
   .footer-logo {
     margin: 0 auto;
+    display: block;
   }
 
   .footer-top {
     text-align: center;
+    margin-top: 25px !important;
   }
 
   .footer-text {
     max-width: 70%;
-    margin: 0 auto;
+    margin: 20px auto 0;
   }
 
   .sitemap {
@@ -881,12 +1245,12 @@ li {
   }
 
   .footer-heading {
-    font-size: 6vw;
+    font-size: 7vw;
     letter-spacing: 0;
   }
 
   .footer-section a {
-    font-size: 3vw;
+    font-size: 3.5vw;
   }
 
   .footer-top p {
@@ -897,41 +1261,7 @@ li {
     margin-bottom: 20px !important;
   }
 
-  .footer-bottom .flex-column {
-    flex-direction: column-reverse !important;
+  .footer-bottom p {
+    font-size: 3.5vw;
   }
-
-  .footer-social {
-    margin-bottom: 1rem;
-  }
-
-  .diwizon {
-    font-size: 4vw !important;
-  }
-
-  .footer-top {
-    margin-top: 25px !important;
-  }
-
-  .footer-section {
-    margin-top: 25px;
-  }
-
-  .popup-modal h2 {
-    font-size: 17px !important;
-  }
-
-  .col-md-5 {
-    width: 100% !important;
-  }
-
-  .col-md-6 {
-    width: 100% !important;
-  }
-
-  .main-content {
-    width: 99.50%;
-    margin-left: 0;
-  }
-
 }
