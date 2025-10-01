@@ -1,3 +1,25 @@
+/* Import Erode font */
+@font-face {
+  font-family: 'Erode';
+  src: url('fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.woff2') format('woff2'),
+    url('fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.woff') format('woff'),
+    url('fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.ttf') format('truetype');
+  font-weight: 500;
+  /* adjust based on file (Regular=400, Medium=500, etc.) */
+  font-style: normal;
+}
+
+/* Import Synonym font */
+@font-face {
+  font-family: 'Synonym';
+  src: url('fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.woff2') format('woff2'),
+    url('fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.woff') format('woff'),
+    url('fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.ttf') format('truetype');
+  font-weight: 400;
+  /* adjust weight */
+  font-style: normal;
+}
+
 /* ============================================
    GLOBAL RESET & BASE STYLES
    ============================================ */
@@ -10,6 +32,20 @@
 body {
   display: flex;
   background: #fff;
+  font-family: 'Erode', serif;
+}
+
+/* Ensure headings use Erode across the site */
+h1,
+h2,
+h3 {
+  font-family: 'Erode-Variable', 'Erode', serif !important;
+  font-weight: 600;
+}
+
+p {
+  font-family: 'Synonym', sans-serif;
+  font-weight: 400;
 }
 
 html {
@@ -283,10 +319,12 @@ li {
   margin-top: 20px;
   text-align: center;
 }
+
 .artistSwiper .swiper-pagination-bullet {
   background: #111;
   opacity: 0.3;
 }
+
 .artistSwiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
@@ -294,20 +332,17 @@ li {
 /* ============================================
    YOU TUBE SECTION
    ============================================ */
-.youTube-section {
+.ytcarusal-section {
   margin-top: 80px;
-  padding: 0;
-  width: 100%;
-  overflow: hidden;
+  padding: 0 0.5vw;
 }
 
-.youTube-top {
+.ytcarusal-section-top {
   text-align: center;
   margin-bottom: 40px;
-  padding: 0 4vw;
 }
 
-.youTube-top h2 {
+.ytcarusal-section-top h2 {
   font-size: 2.489vw;
   line-height: 1;
   letter-spacing: -0.115vw;
@@ -316,126 +351,104 @@ li {
   margin-bottom: 10px;
 }
 
-.youTube-top p {
+.ytcarusal-section-top p {
   font-size: 2.049vw;
   font-family: "Barlow", sans-serif;
   font-weight: 300;
   margin-top: 10px;
 }
 
-/* youTube Swiper */
-.youTubeSwiper {
-  padding: 20px 0 60px;
-  width: 1400px;
-  margin: 0;
-  position: relative;
+.ytSwiper {
+  padding: 20px 0 40px;
 }
 
-.youTubeSwiper .swiper-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.youTubeSwiper .swiper-slide {
-  background: #000;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  width: 280px !important;
-  height: 500px !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); */
-  flex-shrink: 0;
-}
-
-.youTubeSwiper .swiper-slide:hover {
-  transform: translateY(-10px);
-  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); */
-}
-
-.shorts-iframe-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-}
-
-.shorts-iframe-container iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
-  border-radius: 16px;
-}
-
-/* Navigation */
-.youTubeSwiper .swiper-button-next,
-.youTubeSwiper .swiper-button-prev {
-  color: #111;
-  width: 45px;
-  height: 45px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-}
-
-.youTubeSwiper .swiper-button-next:after,
-.youTubeSwiper .swiper-button-prev:after {
-  font-size: 20px;
-}
-
-.youTubeSwiper .swiper-pagination {
+.ytSwiper .swiper-pagination {
   position: relative;
   margin-top: 20px;
   text-align: center;
 }
 
-.youTubeSwiper .swiper-pagination-bullet {
+.ytSwiper .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* .eventSwiper .swiper-slide {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 0.5px solid grey; /* always visible */
+
+.ytSwiper .swiper-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+  /* prevents image overflow weirdness */
+}
+
+.ytSwiper .swiper-slide:hover iframe {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  /* only image zooms */
+}
+
+/* remove translate effect on the whole slide */
+.ytSwiper .swiper-slide:hover {
+  transform: none;
+}
+
+.ytSwiper .swiper-slide .name-box-event {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  opacity: 1;
+  font-size: 1.171vw;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  transition: bottom 0.4s ease, opacity 0.4s ease;
+}
+
+.ytSwiper .swiper-slide:hover .name-box-event {
+  bottom: -40px;
+  opacity: 0;
+}
+
+.ytSwiper .swiper-pagination {
+  position: relative;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.ytSwiper .swiper-pagination-bullet {
   background: #111;
   opacity: 0.3;
 }
 
-.youTubeSwiper .swiper-pagination-bullet-active {
+.ytSwiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
 
-.youTube-top .artist-btn {
-  margin-top: 30px;
+.name-box {
+  padding: 1.2vw 1.5vw;
+  color: #fff;
+  font-size: 1.171vw;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  background-color: #062b3b;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .youTube-section {
-    margin-top: 50px;
-    padding: 0 4vw;
-  }
-
-  .youTube-top h2 {
-    font-size: 6vw !important;
-  }
-
-  .youTube-top p {
-    font-size: 4vw !important;
-  }
-
-  .youTubeSwiper .swiper-slide {
-    width: 200px !important;
-    height: 355px !important;
-  }
-
-  .youTubeSwiper .swiper-button-next,
-  .youTubeSwiper .swiper-button-prev {
-    width: 35px;
-    height: 35px;
-  }
-
-  .youTubeSwiper .swiper-button-next:after,
-  .youTubeSwiper .swiper-button-prev:after {
-    font-size: 16px;
-  }
-}
 /* ============================================
    ART WORKS SECTION
    ============================================ */
@@ -493,7 +506,7 @@ li {
   }
 }
 
-.row-equal > div {
+.row-equal>div {
   display: flex;
   flex-direction: column;
 }
@@ -697,11 +710,12 @@ li {
   border-radius: 10px;
   overflow: hidden;
   /* box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
 }
 
-.artworkSwiper .swiper-slide:hover {
+.artworkSwiper .swiper-slide img:hover {
   transform: translateY(-10px);
+  border-radius: 10px;
   /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); */
 }
 
@@ -770,6 +784,7 @@ li {
   background: #111;
   opacity: 0.3;
 }
+
 .artworkSwiper .swiper-pagination {
   position: relative;
   margin-top: 20px;
@@ -779,6 +794,7 @@ li {
 .artworkSwiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
+
 /* ============================================
    EVENT SECTION
    ============================================ */
@@ -840,11 +856,13 @@ li {
   height: 300px;
   object-fit: cover;
   transition: transform 0.3s ease;
-  display: block; /* prevents image overflow weirdness */
+  display: block;
+  /* prevents image overflow weirdness */
 }
 
 .eventSwiper .swiper-slide:hover img {
-  transform: scale(1.05); /* only image zooms */
+  transform: scale(1.05);
+  /* only image zooms */
 }
 
 /* remove translate effect on the whole slide */
@@ -877,10 +895,12 @@ li {
   margin-top: 20px;
   text-align: center;
 }
+
 .eventSwiper .swiper-pagination-bullet {
   background: #111;
   opacity: 0.3;
 }
+
 .eventSwiper .swiper-pagination-bullet-active {
   opacity: 1;
 }
@@ -1159,6 +1179,7 @@ li {
 
 /* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
+
   /* Banner Carousel */
   /* Banner Carousel - Increased Height for Mobile */
   .banner-slide {
