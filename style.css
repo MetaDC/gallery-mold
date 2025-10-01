@@ -296,21 +296,15 @@ li {
    ============================================ */
 .youTube-section {
   margin-top: 80px;
-  /* padding: 0 0.5vw; */
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .youTube-top {
   text-align: center;
   margin-bottom: 40px;
-}
-/* Prevent transition jump (instant slide instead of animated) */
-.youTubeSwiper .swiper-wrapper {
-  /* transform: none !important; */
-}
-
-/* Optional: Prevent transform effects (only if you don’t need sliding, not recommended) */
-.youTubeSwiper .swiper-slide {
-  transform: none !important;
+  padding: 0 4vw;
 }
 
 .youTube-top h2 {
@@ -331,9 +325,16 @@ li {
 
 /* youTube Swiper */
 .youTubeSwiper {
-  /* padding: 20px 0 40px; */
-  max-width: 1400px;
-  /* margin: 0 auto; */
+  padding: 20px 0 60px;
+  width: 1400px;
+  margin: 0;
+  position: relative;
+}
+
+.youTubeSwiper .swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .youTubeSwiper .swiper-slide {
@@ -341,22 +342,24 @@ li {
   border-radius: 16px;
   overflow: hidden;
   position: relative;
-  /* width: 280px !important; */
+  width: 280px !important;
   height: 500px !important;
-  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); */
+  flex-shrink: 0;
 }
 
 .youTubeSwiper .swiper-slide:hover {
-  /* transform: translateY(-10px); */
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  transform: translateY(-10px);
+  /* box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25); */
 }
 
 .shorts-iframe-container {
   width: 100%;
   height: 100%;
+  display: flex;
   align-items: center;
-  /* position: relative; */
+  justify-content: center;
   background: #000;
 }
 
@@ -396,6 +399,10 @@ li {
 
 .youTubeSwiper .swiper-pagination-bullet-active {
   opacity: 1;
+}
+
+.youTube-top .artist-btn {
+  margin-top: 30px;
 }
 
 /* Mobile Responsive */
