@@ -29,7 +29,10 @@
     <meta property="og:type" content="website" />
 
     <title>Gallery - Gallery Mold</title>
-    <link rel="stylesheet" href="fonts/Erode_Complete/Fonts/WEB/css/erode.css" />
+    <link
+      rel="stylesheet"
+      href="fonts/Erode_Complete/Fonts/WEB/css/erode.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,7 +51,12 @@
 
     <style>
       /* Force Erode for headings site-wide on this page */
-      h1, h2, h3 { font-family: 'Erode-Variable', 'Erode', serif !important; font-weight: 600; }
+      h1,
+      h2,
+      h3 {
+        font-family: "Erode-Variable", "Erode", serif !important;
+        font-weight: 600;
+      }
       * {
         margin: 0;
         padding: 0;
@@ -644,19 +652,20 @@
         <button class="filter-btn active" data-filter="all">
           All Artworks
         </button>
-        <button class="filter-btn" data-filter="paintings">Paintings</button>
-        <button class="filter-btn" data-filter="sculptures">Sculptures</button>
-        <button class="filter-btn" data-filter="photography">
-          Photography
-        </button>
-        <button class="filter-btn" data-filter="mixed-media">
-          Mixed Media
-        </button>
+        <button class="filter-btn" data-filter="sediments">Sediments</button>
+        <button class="filter-btn" data-filter="oldtoself">Old To Self</button>
       </div>
 
       <!-- Gallery Grid -->
       <div class="gallery-grid" id="galleryGrid">
         <!-- Gallery items will be populated by JavaScript -->
+        <!-- <div class="gallery-item" data-id="${item.id}">
+          <img src="${item.image}" alt="${item.title}" />
+          <div class="gallery-overlay">
+            <h3>${item.title}</h3>
+            <p>by ${item.artist}</p>
+          </div>
+        </div> -->
       </div>
     </main>
 
@@ -679,113 +688,460 @@
           id: 1,
           title: "Abstract Expression I",
           artist: "Eva Joy",
-          category: "paintings",
-          image:
-            "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=500",
+          category: "sediments",
+          image: "images/sediments/5.webp",
           description:
             "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 2,
-          title: "Urban Reflections",
-          artist: "Snehal Desai",
-          category: "photography",
-          image:
-            "https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=500",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/6.webp",
           description:
-            "Contemporary urban landscape capturing the intersection of light and architecture.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 3,
-          title: "Metamorphosis",
-          artist: "Ravindra Saravaiya",
-          category: "sculptures",
-          image:
-            "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=500",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/7.webp",
           description:
-            "A sculptural piece that explores transformation and the fluidity of form.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 4,
-          title: "Digital Dreams",
-          artist: "Kumar Krishna",
-          category: "mixed-media",
-          image:
-            "https://images.unsplash.com/photo-1578301978162-7aae4d755744?w=500",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/8.webp",
           description:
-            "Mixed media artwork blending traditional techniques with digital innovation.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 5,
-          title: "Serenity",
-          artist: "Nidhi Sabhaya",
-          category: "paintings",
-          image: "images/nidhi-sabhaya.png",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/9.webp",
           description:
-            "A peaceful composition that invites contemplation and inner reflection.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 6,
-          title: "Contemporary Forms",
-          artist: "Sneha Desai",
-          category: "sculptures",
-          image: "images/sneha-min.jpg",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/10.webp",
           description:
-            "Modern sculptural interpretation of classical forms and contemporary themes.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 7,
-          title: "Landscape Study",
-          artist: "Akash Bhoya",
-          category: "paintings",
-          image: "images/akash-bhoya-min.jpg",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/11.webp",
           description:
-            "A contemporary take on landscape painting with bold colors and dynamic composition.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 8,
-          title: "Identity Fragments",
-          artist: "Archana Singh",
-          category: "mixed-media",
-          image: "images/archana-singh-min.jpg",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/12.webp",
           description:
-            "Mixed media exploration of identity and cultural heritage in modern context.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 9,
-          title: "Motion Studies",
-          artist: "Deepika Sakhat",
-          category: "photography",
-          image: "images/deepika-sakhat-min.jpg",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/13.webp",
           description:
-            "Photographic series capturing movement and time in urban environments.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 10,
-          title: "Textural Narratives",
-          artist: "Pratima Tandel",
-          category: "mixed-media",
-          image: "images/pratima-tandel-min.jpg",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/14.webp",
           description:
-            "Rich textural work that tells stories through layers and materiality.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 11,
-          title: "Geometric Harmony",
-          artist: "Gallery Collection",
-          category: "paintings",
-          image: "images/art-work-1-min.png",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/15.webp",
           description:
-            "Abstract geometric composition exploring balance and visual rhythm.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
         {
           id: 12,
-          title: "Contemporary Vision",
-          artist: "Gallery Collection",
-          category: "paintings",
-          image: "images/art-work-2-min.png",
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/16.webp",
           description:
-            "Large-scale contemporary painting that challenges traditional perspectives.",
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 13,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/17.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 14,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/18.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 15,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/19.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 16,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/20.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 17,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/21.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 18,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/22.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 19,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/23.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 20,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/24.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 21,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "sediments",
+          image: "images/sediments/25.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 22,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/1.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 23,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/2.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 24,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/3.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 25,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/8.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 26,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/9.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 27,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/10.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 28,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/11.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 29,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/13.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 30,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/14.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 31,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/15.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 32,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/16.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 33,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/17.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 34,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/18.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 35,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/23.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 36,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/24.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 37,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/25.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 38,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/26.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 39,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/27.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 40,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/28.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 41,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/29.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 42,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/30.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 43,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/31.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 44,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/32.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 45,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/33.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 46,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/34.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 47,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/35.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 48,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/36.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 49,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/37.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 50,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/38.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
+        },
+        {
+          id: 51,
+          title: "Abstract Expression I",
+          artist: "Eva Joy",
+          category: "oldtoself",
+          image: "images/oldtoself/39.webp",
+          description:
+            "A vibrant exploration of color and form that captures the essence of human emotion.",
         },
       ];
 
@@ -817,14 +1173,11 @@
         galleryGrid.innerHTML = filteredData
           .map(
             (item) => `
-        <div class="gallery-item" data-id="${item.id}">
-          <img src="${item.image}" alt="${item.title}">
-          <div class="gallery-overlay">
-            <h3>${item.title}</h3>
-            <p>by ${item.artist}</p>
-          </div>
-        </div>
-      `
+              <div class="gallery-item" data-id="${item.id}">
+                <img src="${item.image}" alt="${item.title}">
+          
+              </div>
+            `
           )
           .join("");
 
