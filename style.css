@@ -1,9 +1,11 @@
 /* Import Erode font */
 @font-face {
-  font-family: 'Erode';
-  src: url('fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.woff2') format('woff2'),
-    url('fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.woff') format('woff'),
-    url('fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.ttf') format('truetype');
+  font-family: "Erode";
+  src: url("fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.woff2")
+      format("woff2"),
+    url("fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.woff") format("woff"),
+    url("fonts/Erode_Complete/Fonts/WEB/fonts/Erode-Medium.ttf")
+      format("truetype");
   font-weight: 500;
   /* adjust based on file (Regular=400, Medium=500, etc.) */
   font-style: normal;
@@ -11,10 +13,13 @@
 
 /* Import Synonym font */
 @font-face {
-  font-family: 'Synonym';
-  src: url('fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.woff2') format('woff2'),
-    url('fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.woff') format('woff'),
-    url('fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.ttf') format('truetype');
+  font-family: "Synonym";
+  src: url("fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.woff2")
+      format("woff2"),
+    url("fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.woff")
+      format("woff"),
+    url("fonts/Synonym_Complete/Fonts/WEB/fonts/Synonym-Regular.ttf")
+      format("truetype");
   font-weight: 400;
   /* adjust weight */
   font-style: normal;
@@ -32,19 +37,19 @@
 body {
   display: flex;
   background: #fff;
-  font-family: 'Erode', serif;
+  font-family: "Erode", serif;
 }
 
 /* Ensure headings use Erode across the site */
 h1,
 h2,
 h3 {
-  font-family: 'Erode-Variable', 'Erode', serif !important;
+  font-family: "Erode-Variable", "Erode", serif !important;
   font-weight: 600;
 }
 
 p {
-  font-family: 'Synonym', sans-serif;
+  font-family: "Synonym", sans-serif;
   font-weight: 400;
 }
 
@@ -266,7 +271,7 @@ li {
    ARTIST SECTION
    ============================================ */
 .artist-section {
-  margin-top: 80px;
+  margin-top: 150px;
   padding: 0 0.5vw;
 }
 
@@ -333,7 +338,7 @@ li {
    YOU TUBE SECTION
    ============================================ */
 .ytcarusal-section {
-  margin-top: 80px;
+  margin-top: 150px;
   padding: 0 0.5vw;
 }
 
@@ -506,7 +511,7 @@ li {
   }
 }
 
-.row-equal>div {
+.row-equal > div {
   display: flex;
   flex-direction: column;
 }
@@ -538,7 +543,7 @@ li {
    ABOUT US SECTION
    ============================================ */
 .about-us {
-  margin-top: 80px;
+  margin-top: 150px;
   /* padding: 0 2.5vw; */
 }
 
@@ -563,6 +568,12 @@ li {
   font-weight: 500;
   margin-top: 20px;
 }
+.about-content h3 {
+  font-size: 2.049vw;
+  font-weight: 400;
+  color: #666;
+  margin-top: 10px;
+}
 
 .about-content p {
   font-size: 1.171vw;
@@ -577,7 +588,7 @@ li {
    MISSION/VISION SECTION
    ============================================ */
 .mission-vision-section {
-  margin-top: 80px;
+  margin-top: 150px;
   padding: 0 0.5vw;
 }
 
@@ -668,7 +679,7 @@ li {
 
 /* Artwork Slider Section */
 .artwork-slider-section {
-  margin-top: 50px;
+  margin-top: 150px;
   text-align: center;
 }
 
@@ -799,7 +810,7 @@ li {
    EVENT SECTION
    ============================================ */
 .eventscarusal-section {
-  margin-top: 80px;
+  margin-top: 150px;
   padding: 0 0.5vw;
 }
 
@@ -1179,7 +1190,6 @@ li {
 
 /* Mobile Devices (768px and below) */
 @media (max-width: 768px) {
-
   /* Banner Carousel */
   /* Banner Carousel - Increased Height for Mobile */
   .banner-slide {
