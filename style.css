@@ -88,7 +88,7 @@ li {
   display: flex;
   align-items: center;
   gap: 70px;
-  max-width: 100px;
+  /* max-width: 100px; */
 }
 
 .top-left img {
@@ -110,15 +110,23 @@ li {
 }
 
 .top-right {
-  text-align: right;
-  font-size: 14px;
-  font-family: "Barlow", sans-serif;
-  font-weight: 300;
+  display: flex;
+  align-items: center;
+  /* text-align: right; */
+  /* font-size: 14px; */
+  /* font-family: "Barlow", sans-serif; */
+  max-width: 100%;
+  /* gap: 70px; */
+  /* font-weight: 300;
   max-width: 100px;
-  min-width: 100px;
+  min-width: 100px; */
+}
+.top-right img {
+  width: 80px;
+  height: 80px;
 }
 
-.top-right p {
+/* .top-right p {
   margin-bottom: 0 !important;
 }
 
@@ -126,6 +134,186 @@ li {
   color: #000;
   text-decoration: underline;
   line-height: 1.2;
+} */
+
+/* ============================================
+   GALLERY SPACE SECTION
+   ============================================ */
+
+.gallery-space {
+  padding: 80px 0;
+  background: #ffffff;
+}
+
+.gallery-space .row {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.gallery-img {
+  padding: 0 15px;
+}
+
+.gallery-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  display: block;
+}
+
+.gallery-content {
+  padding: 0 30px;
+}
+
+.gallery-content h2 {
+  font-size: 2.489vw;
+  line-height: 1;
+  letter-spacing: -0.115vw;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.gallery-content h3 {
+  font-size: 1.3rem;
+  color: #a8856f;
+  margin-bottom: 30px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 18px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  border-left: 3px solid #8b6f47;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.feature-item:hover {
+  background: #f0f0f0;
+  border-left-color: #d4a574;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #8b6f47;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover .feature-icon {
+  background: #d4a574;
+  transform: scale(1.05);
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-text strong {
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.feature-text p {
+  color: #666;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  margin: 0;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.feature-item:hover .feature-text p {
+  max-height: 100px;
+  opacity: 1;
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery-space .row {
+    flex-direction: column;
+  }
+
+  .gallery-img {
+    margin-bottom: 40px;
+  }
+
+  .gallery-content {
+    padding: 0 15px;
+  }
+
+  .gallery-content h2 {
+    font-size: 2.2rem;
+  }
+
+  .gallery-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .features-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .gallery-space {
+    padding: 60px 0;
+  }
+
+  .gallery-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .feature-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .feature-icon {
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+
+  .feature-text strong {
+    font-size: 0.9rem;
+  }
+
+  .feature-text p {
+    font-size: 0.75rem;
+  }
 }
 
 /* ============================================
@@ -313,7 +501,127 @@ li {
 .artist-btn:hover {
   background-color: #444;
 }
+/* calendly */
+/* Calendly Section */
+.calendly-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 30px;
+}
 
+.calendly-section h3 {
+  font-family: "Barlow", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.calendly-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 35px;
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.calendly-btn:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.calendly-btn i {
+  font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .calendly-section {
+    margin-top: 30px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .calendly-section h3 {
+    font-size: 20px;
+  }
+
+  .calendly-btn {
+    padding: 12px 25px;
+    font-size: 14px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .calendly-inline-widget {
+    height: 600px !important;
+  }
+}
+/* book now */
+.booknow-btn {
+  display: inline-block;
+  /* margin-top: 20px; */
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  background-color: #222;
+  color: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap; /* Add this line */
+}
+
+.booknow-btn:hover {
+  background-color: #444;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.booknow-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.booknow-btn:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 0 3px rgba(68, 68, 68, 0.3);
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .booknow-btn {
+    padding: 10px 25px;
+    font-size: 0.9rem;
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .booknow-btn {
+    padding: 12px 20px;
+    font-size: 0.85rem;
+  }
+}
 /* Artist Swiper */
 .artistSwiper {
   padding: 20px 0 40px;
@@ -338,7 +646,7 @@ li {
    YOU TUBE SECTION
    ============================================ */
 .ytcarusal-section {
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 0 0.5vw;
 }
 

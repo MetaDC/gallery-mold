@@ -682,9 +682,15 @@
 
     <!-- Top Navbar -->
     <header class="top-navbar">
-      <div class="top-left">
-        <a href="#"><img src="images/call.png" alt="Call" /></a>
-        <a href="#"><img src="images/email.png" alt="Email" /></a>
+      <div class="top-left" style="padding-left: 100px">
+        <!-- <a href="#"><img src="images/call.png" alt="Call" /></a>
+        <a href="#"><img src="images/email.png" alt="Email" /></a> -->
+        <button
+          class="booknow-btn"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thegallerymold/30min'});return false;"
+        >
+          Book Now
+        </button>
       </div>
       <div class="top-center">
         <a href="index.html" class="logo">
@@ -707,15 +713,15 @@
       <ul class="menu-items">
         <li>
           <span class="bar yellow"></span>
-          <a href="index.html#exhibitions">Exhibitions</a>
+          <a href="index.html#about">About us</a>
         </li>
         <li>
           <span class="bar orange"></span>
-          <a href="index.html#artwork">Art Works</a>
+          <a href="index.html#exhibitions">Event</a>
         </li>
         <li>
           <span class="bar blue"></span>
-          <a href="index.html#ytglimps">Glimps</a>
+          <a href="index.html#artwork">Glimps</a>
         </li>
         <li>
           <span class="bar green"></span>
@@ -738,9 +744,9 @@
     <!-- Left Sidebar -->
     <aside class="left-sidebar">
       <ul>
-        <li><a href="index.html#exhibitions" class="link-1">Exhibitions</a></li>
-        <li><a href="index.html#artwork" class="link-2">Art Works</a></li>
-        <li><a href="index.html#ytglimps" class="link-3">Glimps</a></li>
+        <li><a href="index.html#about" class="link-1">About us</a></li>
+        <li><a href="index.html#exhibitions" class="link-2">Event</a></li>
+        <li><a href="index.html#artwork" class="link-3">Glimps</a></li>
         <li><a href="index.html#contactus" class="link-4">Contact Us</a></li>
       </ul>
     </aside>
@@ -771,16 +777,13 @@
             <div class="story-text">
               <h3>A Vision for Contemporary Art</h3>
               <p>
-                Gallery Mold was founded with a singular vision: to create a
-                space where contemporary art transcends traditional boundaries.
-                Located in the heart of Vadodara, we've cultivated an
-                environment that celebrates both established and emerging
-                artists.
-              </p>
-              <p>
-                Our journey began with the belief that art should be accessible,
-                engaging, and thought-provoking. Today, we continue to push the
-                boundaries of what an art gallery can be.
+                Gallery MOLD began just six months ago with a simple dream — to
+                create a space in Vadodara where young and emerging artists
+                could grow and share their voices. Vadodara has always been a
+                city rich in art and culture, and we wanted to add a new chapter
+                to that story. Our vision is to build a community where
+                creativity thrives and young audiences can experience art that
+                inspires, challenges, and connects.
               </p>
             </div>
           </div>
@@ -789,15 +792,14 @@
             <div class="story-text">
               <h3>Curating Excellence</h3>
               <p>
-                Every exhibition at Gallery Mold is carefully curated to
-                showcase diverse perspectives and innovative techniques. We
-                explore the aesthetic and conceptual dimensions of modern times,
-                bridging innovative practices with traditional artistry.
-              </p>
-              <p>
-                From intimate solo shows to large-scale group exhibitions, we
-                provide a platform for artists to connect with audiences in
-                meaningful ways.
+                Designed with an international outlook, Gallery MOLD brings a
+                fresh, contemporary lens to art. It’s a space where modern
+                ideas, experimental works, and interactive experiences come
+                together. Founded by *Shilpa Parikh*, an art enthusiast who has
+                explored galleries across the world, MOLD reflects her belief
+                that Vadodara holds immense creative potential. Through this
+                space, we hope to share that spirit with the world and help
+                shape the city’s next era of art and culture.
               </p>
             </div>
             <img
@@ -808,7 +810,37 @@
           </div>
         </section>
       </div>
+      <!-- Mission/Vision Section -->
+      <section class="mission-vision-section">
+        <div class="mission-vision-header">
+          <h2>Inside Gallery Mold</h2>
+          <p>Guiding principles that shape our journey!</p>
+        </div>
 
+        <div class="mission-vision-content">
+          <div class="mission-box">
+            <h3>Vision & Mission</h3>
+            <p>
+              To amplify the voices of young and emerging artists by providing a
+              platform that nurtures creativity, encourages experimentation, and
+              fosters meaningful dialogue. We are committed to supporting
+              artists at critical stages of their careers, helping them express
+              vital ideas that shape our contemporary world.
+            </p>
+          </div>
+
+          <div class="vision-box">
+            <h3>Vision</h3>
+            <p>
+              To become a leading force in shaping the future of contemporary
+              art in India and the subcontinent. We envision a vibrant artistic
+              community where emerging practitioners can thrive, boundaries are
+              challenged, and new perspectives enrich the cultural landscape for
+              generations to come.
+            </p>
+          </div>
+        </div>
+      </section>
       <!-- Values Section -->
       <section class="values-section">
         <h2 class="section-title">Our Values</h2>
@@ -848,11 +880,27 @@
               programming and educational initiatives.
             </p>
           </div>
+          <div class="value-card">
+            <div class="value-icon">🌍</div>
+            <h3>Accessibility</h3>
+            <p>
+              Making art accessible to diverse audiences through inclusive
+              programming and educational initiatives.
+            </p>
+          </div>
+          <div class="value-card">
+            <div class="value-icon">🌍</div>
+            <h3>Accessibility</h3>
+            <p>
+              Making art accessible to diverse audiences through inclusive
+              programming and educational initiatives.
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- Stats Section -->
-      <section class="stats-section">
+      <section class="stats-section" style="display: none">
         <div class="stats-grid">
           <div class="stat-item">
             <h3>50+</h3>
@@ -874,7 +922,7 @@
       </section>
 
       <!-- Team Section -->
-      <section class="team-section">
+      <section class="team-section" style="display: none">
         <h2 class="section-title">Meet Our Team</h2>
         <div class="team-grid">
           <div class="team-member">
@@ -982,5 +1030,14 @@
         </div>
       </footer>
     </main>
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
   </body>
 </html>
