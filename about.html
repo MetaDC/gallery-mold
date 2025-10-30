@@ -355,11 +355,21 @@
         position: relative;
         height: 60vh;
         min-height: 400px;
-        background: linear-gradient(135deg, #07080d 0%, #ece3f5 100%);
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
+      }
+
+      .hero-section img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
       }
 
       .hero-overlay {
@@ -368,12 +378,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.3);
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
       }
 
       .hero-content {
         position: relative;
-        z-index: 2;
+        z-index: 3;
         text-align: center;
         color: white;
         padding: 0 2rem;
@@ -384,6 +395,7 @@
         font-weight: 600;
         margin-bottom: 1rem;
         letter-spacing: -2px;
+        text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
       }
 
       .hero-content p {
@@ -391,6 +403,57 @@
         font-weight: 300;
         max-width: 700px;
         margin: 0 auto;
+        text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      /* Responsive Design */
+      @media (max-width: 1024px) {
+        .hero-content h1 {
+          font-size: 3.5rem;
+        }
+
+        .hero-content p {
+          font-size: 1.3rem;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-section {
+          height: 50vh;
+          min-height: 350px;
+        }
+
+        .hero-content h1 {
+          font-size: 2.5rem;
+          letter-spacing: -1px;
+        }
+
+        .hero-content p {
+          font-size: 1.1rem;
+        }
+
+        .hero-content {
+          padding: 0 1.5rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .hero-section {
+          height: 45vh;
+          min-height: 300px;
+        }
+
+        .hero-content h1 {
+          font-size: 2rem;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+        }
+
+        .hero-content {
+          padding: 0 1rem;
+        }
       }
 
       /* About Content Section */
@@ -458,6 +521,7 @@
 
       /* Values Section */
       .values-section {
+        margin-top: 100px;
         background: #f8f9fa;
         padding: 80px 2rem;
       }
@@ -672,6 +736,30 @@
           font-size: 1rem;
         }
       }
+      .mission-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .mission-list li {
+        padding-left: 25px;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .mission-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
     </style>
   </head>
 
@@ -682,7 +770,7 @@
 
     <!-- Top Navbar -->
     <header class="top-navbar">
-      <div class="top-left" style="padding-left: 100px">
+      <div class="top-left" style="padding-left: 128px">
         <!-- <a href="#"><img src="images/call.png" alt="Call" /></a>
         <a href="#"><img src="images/email.png" alt="Email" /></a> -->
         <button
@@ -755,7 +843,9 @@
     <main class="main-content">
       <!-- Hero Section -->
       <section class="hero-section">
-        <div class="hero-overlay"></div>
+        <div class="hero-overlay">
+          <img src="images/aboutdarkbanner.webp" alt="about banner" />
+        </div>
         <div class="hero-content">
           <h1>About Gallery Mold</h1>
           <p>Bridging innovative art practices with contemporary aesthetics</p>
@@ -770,7 +860,7 @@
 
           <div class="story-grid">
             <img
-              src="images/sediments/5.webp"
+              src="images/ourstroy.webp"
               alt="Gallery Space"
               class="story-image"
             />
@@ -803,7 +893,7 @@
               </p>
             </div>
             <img
-              src="images/oldtoself/1.webp"
+              src="images/ourstory2.webp"
               alt="Exhibition"
               class="story-image"
             />
@@ -820,25 +910,41 @@
         <div class="mission-vision-content">
           <div class="mission-box">
             <h3>Vision & Mission</h3>
-            <p>
-              To amplify the voices of young and emerging artists by providing a
-              platform that nurtures creativity, encourages experimentation, and
-              fosters meaningful dialogue. We are committed to supporting
-              artists at critical stages of their careers, helping them express
-              vital ideas that shape our contemporary world.
-            </p>
+            <ul class="mission-list">
+              <li>To amplify the voices of young and emerging artists.</li>
+              <li>
+                Provide opportunities for experimentation, learning, and growth.
+              </li>
+              <li>
+                Support artists, designers and businesses at critical career
+                junctures and to build the cultural landscape for the city of
+                Vadodara.
+              </li>
+              <li>
+                Collaborations with artists, curators, designers and selected
+                businesses.
+              </li>
+            </ul>
           </div>
 
-          <div class="vision-box">
+          <!-- <div class="vision-box">
             <h3>Vision</h3>
-            <p>
-              To become a leading force in shaping the future of contemporary
-              art in India and the subcontinent. We envision a vibrant artistic
-              community where emerging practitioners can thrive, boundaries are
-              challenged, and new perspectives enrich the cultural landscape for
-              generations to come.
-            </p>
-          </div>
+            <ul class="mission-list">
+              <li>To amplify the voices of young and emerging artists.</li>
+              <li>
+                Provide opportunities for experimentation, learning, and growth.
+              </li>
+              <li>
+                Support artists, designers and businesses at critical career
+                junctures and to build the cultural landscape for the city of
+                Vadodara.
+              </li>
+              <li>
+                Collaborations with artists, curators, designers and selected
+                businesses.
+              </li>
+            </ul>
+          </div> -->
         </div>
       </section>
       <!-- Values Section -->
@@ -1002,9 +1108,10 @@
           <div class="col-lg-3 mb-4 sitemap">
             <h5 class="footer-heading"><span>s</span>ite map</h5>
             <ul class="list-unstyled">
-              <li><a href="index.html#artwork">ART WORKS</a></li>
-              <li><a href="index.html#exhibitions">EXHIBITIONS</a></li>
-              <li><a href="index.html#ytglimps">GLIMPS</a></li>
+              <li><a href="index.html#about">ABOUT US</a></li>
+              <li><a href="index.html#exhibitions">EVENTS</a></li>
+              <li><a href="index.html#artwork">GLIMPS</a></li>
+              <!-- <li><a href="#event">EVENTS</a></li> -->
               <li><a href="contact.html">CONTACT</a></li>
             </ul>
           </div>
@@ -1026,6 +1133,33 @@
               390007
             </p>
             <a href="https://g.co/kgs/Zw49HVQ" target="_blank">GET DIRECTION</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom text-center py-3">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+          >
+            <p class="mb-2 mb-md-0">
+              © Gallery Mold. Developed by
+              <a href="" target="_blank" class="diwizon">Diwizon.</a>
+            </p>
+            <div class="footer-social">
+              <a
+                href="https://www.instagram.com/the_gallerymold/"
+                target="_blank"
+                ><img
+                  src="images/instagram.svg"
+                  alt="Instagram"
+                  class="social-icon"
+              /></a>
+              <a href="#"
+                ><img
+                  src="images/linkedin.svg"
+                  alt="LinkedIn"
+                  class="social-icon"
+              /></a>
+            </div>
           </div>
         </div>
       </footer>

@@ -147,14 +147,17 @@ li {
 
 .gallery-space .row {
   display: flex;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  flex-wrap: nowrap;
+  align-items: flex-start; /* Changed from center to flex-start */
+  gap: 50px;
+  /* margin: 0; */
+  margin-left: 78px;
+  padding: 0;
 }
 
 .gallery-img {
   padding: 0 15px;
+  flex-shrink: 0; /* Added: Prevents image from shrinking */
 }
 
 .gallery-img img {
@@ -167,6 +170,7 @@ li {
 
 .gallery-content {
   padding: 0 30px;
+  flex: 1; /* Added: Takes remaining space */
 }
 
 .gallery-content h2 {
@@ -190,9 +194,11 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 15px;
+  align-items: start;
+  grid-auto-rows: auto; /* Added: Each row takes natural height */
 }
 
 .feature-item {
@@ -205,12 +211,15 @@ li {
   border-left: 3px solid #8b6f47;
   transition: all 0.3s ease;
   cursor: pointer;
+  align-self: start;
+  will-change: transform, box-shadow; /* Added: Optimizes animation */
 }
 
 .feature-item:hover {
   background: #f0f0f0;
   border-left-color: #d4a574;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px); /* Added: Subtle lift instead of stretch */
 }
 
 .feature-icon {
@@ -233,6 +242,7 @@ li {
 
 .feature-text {
   flex: 1;
+  min-width: 0;
 }
 
 .feature-text strong {
@@ -251,7 +261,7 @@ li {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: all 0.4s ease;
+  transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.4s ease; /* Separated transitions */
 }
 
 .feature-item:hover .feature-text p {
@@ -860,7 +870,8 @@ li {
   flex-wrap: nowrap;
   align-items: center;
   gap: 50px;
-  margin: 0;
+  /* margin: 0; */
+  margin-left: 78px;
   padding: 0;
 }
 
@@ -896,7 +907,7 @@ li {
    MISSION/VISION SECTION
    ============================================ */
 .mission-vision-section {
-  margin-top: 150px;
+  /* margin-top: 150px; */
   padding: 0 0.5vw;
 }
 
@@ -922,7 +933,7 @@ li {
 }
 
 .mission-vision-content {
-  display: grid;
+  /* display: grid; */
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   align-items: start;
@@ -1040,7 +1051,7 @@ li {
 
 .artwork-image {
   width: 100%;
-  height: 300px;
+  height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -1118,7 +1129,7 @@ li {
    EVENT SECTION
    ============================================ */
 .eventscarusal-section {
-  margin-top: 150px;
+  margin-top: 100px;
   padding: 0 0.5vw;
 }
 
