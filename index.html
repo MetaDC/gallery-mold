@@ -58,7 +58,11 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <!-- YouTube Iframe API -->
@@ -278,10 +282,76 @@
         }
       }
 
-      /* Prevent body scroll when modal is open */
+      /* Prevent body scroll when modal is open
       body.modal-open {
         overflow: hidden;
         height: 100vh;
+      } */
+
+      .mission-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .mission-list li {
+        padding-left: 25px;
+        position: relative;
+        line-height: 1.6;
+      }
+
+      .mission-list li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      /* Responsive adjustments for tablets and smaller screens */
+      @media (max-width: 768px) {
+        .mission-list li::before {
+          font-size: 18px; /* Smaller bullets on tablets */
+        }
+
+        .mission-list li {
+          padding-left: 20px; /* Reduce padding for smaller screens */
+        }
+      }
+
+      /* Responsive for mobile screens */
+      @media (max-width: 480px) {
+        .mission-list li::before {
+          font-size: 16px;
+          top: 1px; /* Even smaller bullets for mobile */
+        }
+
+        .mission-list li {
+          padding-left: 15px; /* Less padding for smaller devices */
+        }
+      }
+
+      .events-image {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .events-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .events-image img:hover {
+        transform: scale(1.02);
       }
     </style>
   </head>
@@ -305,7 +375,7 @@
       </div>
     </div>
     <!-- Top Navbar -->
-    <header class="top-navbar" style="padding-left: 128px">
+    <header class="top-navbar" style="padding-left: 78px">
       <div class="top-left">
         <!-- <a href="#"></a> -->
         <!-- <a href="#"><img src="images/email.png" /></a> -->
@@ -323,13 +393,30 @@
         /></a>
       </div>
       <div class="top-right">
-        <!-- <a href="#"><img src="images/email.png" /></a> -->
-        <a href="#"><img src="images/insta.png" /></a>
-        <a href="https://wa.me/919925111805"
-          ><img src="images/whatsapp.png"
-        /></a>
-        <!-- <p>Read More:</p>
-        <a href="#about">About Us</a> -->
+        <a
+          href="https://www.instagram.com/the_gallerymold?igsh=MXFmZ2VueTg3dHdlOA=="
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/share/1FdxHAS2pW/"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://x.com/GalleryMold?t=FcOK1IZVj1Qe15M-XoKxvQ&s=08"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://wa.me/919925111805"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
       </div>
     </header>
     <!-- Mobile Navbar -->
@@ -345,7 +432,7 @@
         <li>
           <span class="bar orange"></span><a href="#exhibitions">Event</a>
         </li>
-        <li><span class="bar blue"></span><a href="#artwork">Glimps</a></li>
+        <li><span class="bar blue"></span><a href="#artwork">Glimpse</a></li>
         <li>
           <span class="bar green"></span><a href="#contactus">Contact Us</a>
         </li>
@@ -368,7 +455,7 @@
       <ul>
         <li><a href="#about" class="link-1">About us</a></li>
         <li><a href="#exhibitions" class="link-2">Event</a></li>
-        <li><a href="#artwork" class="link-3">Glimps</a></li>
+        <li><a href="#artwork" class="link-3">Glimpse</a></li>
         <li><a href="#contactus" class="link-4">Contact Us</a></li>
         <!-- <li><a href="gallery.html" class="link-4">gallery</a></li> -->
       </ul>
@@ -385,13 +472,13 @@
 
           <!-- Add 4 more slides -->
           <div class="carousel-slide active">
+            <img src="images/hero/3.webp" class="img-fluid" />
+          </div>
+          <div class="carousel-slide">
             <img src="images/hero/1.webp" class="img-fluid" />
           </div>
           <div class="carousel-slide">
             <img src="images/hero/2.webp" class="img-fluid" />
-          </div>
-          <div class="carousel-slide">
-            <img src="images/hero/3.webp" class="img-fluid" />
           </div>
           <!-- <div class="carousel-slide">
             <img src="images/hero-4-min.png" class="img-fluid" />
@@ -415,10 +502,10 @@
         </div>
       </section>
 
-      <!-- Glimpses Section -->
+      <!-- Glimpsees Section -->
       <section class="art-section" id="art" style="display: none">
         <div class="art-top text-center mb-4">
-          <h2>Glimpses</h2>
+          <h2>Glimpsees</h2>
           <p>Crafted with passion & creativity !</p>
         </div>
         <div class="container-fluid">
@@ -502,7 +589,7 @@
               class="artist-btn"
               onclick="window.location.href='about.html'"
             >
-              About More
+              Read More
             </button>
           </div>
         </div>
@@ -512,10 +599,10 @@
         <div class="row">
           <div class="gallery-content col-md-6 col-sm-12">
             <h2>Inside Gallery Mold</h2>
-            <h3></h3>
+            <h3>An art space defined by sophistication and purpose.</h3>
             <ul class="features-list">
               <li class="feature-item">
-                <div class="feature-icon">📍</div>
+                <!-- <div class="feature-icon">📍</div> -->
                 <div class="feature-text">
                   <strong>Prime Location</strong>
                   <p>
@@ -524,14 +611,14 @@
                 </div>
               </li>
               <li class="feature-item">
-                <div class="feature-icon">📐</div>
+                <!-- <div class="feature-icon">📐</div> -->
                 <div class="feature-text">
                   <strong>Spacious Layout</strong>
                   <p>1,200 sq. ft. of pillar-free exhibition space.</p>
                 </div>
               </li>
               <li class="feature-item">
-                <div class="feature-icon">✨</div>
+                <!-- <div class="feature-icon">✨</div> -->
                 <div class="feature-text">
                   <strong>Refined Interiors</strong>
                   <p>
@@ -541,7 +628,7 @@
                 </div>
               </li>
               <li class="feature-item">
-                <div class="feature-icon">🅿️</div>
+                <!-- <div class="feature-icon">🅿️</div> -->
                 <div class="feature-text">
                   <strong>Luxury Amenities</strong>
                   <p>
@@ -549,22 +636,22 @@
                   </p>
                 </div>
               </li>
-              <li class="feature-item">
+              <!-- <li class="feature-item">
                 <div class="feature-icon">💻</div>
                 <div class="feature-text">
                   <strong>Tech-Enabled</strong>
                   <p>Ready for custom installations and digital setups.</p>
                 </div>
-              </li>
+              </li> -->
               <li class="feature-item">
-                <div class="feature-icon">🎬</div>
+                <!-- <div class="feature-icon">🎬</div> -->
                 <div class="feature-text">
                   <strong>In-House Production</strong>
                   <p>Professional photo and video facilities.</p>
                 </div>
               </li>
               <li class="feature-item">
-                <div class="feature-icon">🔒</div>
+                <!-- <div class="feature-icon">🔒</div> -->
                 <div class="feature-text">
                   <strong>Advanced Security</strong>
                   <p>CCTV and anti-theft systems for safety.</p>
@@ -572,13 +659,57 @@
               </li>
             </ul>
           </div>
-          <div class="about-img col-md-5 col-sm-12">
-            <img
-              src="images/insidegallery.webp"
-              class="img-fluid"
-              style="width: 100%; height: auto"
-            />
+          <div class="aboutspace-img col-md-5 col-sm-12">
+            <img src="images/inside2.jpg" class="img-fluid" />
           </div>
+        </div>
+      </section>
+
+      <!-- Mission/Vision Section -->
+      <section class="mission-vision-section">
+        <!-- <div class="mission-vision-header">
+          <h2>Inside Gallery Mold</h2>
+          <p>Guiding principles that shape our journey!</p>
+        </div> -->
+
+        <div class="mission-vision-content">
+          <div class="mission-box">
+            <h3>Vision & Mission</h3>
+            <ul class="mission-list">
+              <li>To amplify the voices of young and emerging artists.</li>
+              <li>
+                Provide opportunities for experimentation, learning, and growth.
+              </li>
+              <li>
+                Support artists, designers and businesses at critical career
+                junctures and to build the cultural landscape for the city of
+                Vadodara.
+              </li>
+              <li>
+                Collaborations with artists, curators, designers and selected
+                businesses.
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="vision-box">
+            <h3>Vision</h3>
+            <ul class="mission-list">
+              <li>To amplify the voices of young and emerging artists.</li>
+              <li>
+                Provide opportunities for experimentation, learning, and growth.
+              </li>
+              <li>
+                Support artists, designers and businesses at critical career
+                junctures and to build the cultural landscape for the city of
+                Vadodara.
+              </li>
+              <li>
+                Collaborations with artists, curators, designers and selected
+                businesses.
+              </li>
+            </ul>
+          </div> -->
         </div>
       </section>
 
@@ -586,59 +717,61 @@
       <section class="eventscarusal-section" id="exhibitions">
         <div class="eventscarusal-section-top">
           <h2>Events</h2>
-          <p>Discover upcoming events / exhibitions!</p>
+          <p>Explore our calendar of artistic experiences.</p>
         </div>
 
-        <!-- Swiper Container -->
-        <div class="swiper eventSwiper">
-          <div class="swiper-wrapper">
-            <!-- Each Event Card -->
-            <div class="swiper-slide">
-              <a href="gallery.html" style="text-decoration: none">
-                <img
-                  src="images/events/banner-1-1-min.png"
-                  class="img-fluid object-cover"
-                  alt="Event 1"
-                />
-                <!-- <div class="name-box-event">Event 1</div> -->
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="gallery.html" style="text-decoration: none">
-                <img
-                  src="images/events/image.png"
-                  class="img-fluid object-cover"
-                  alt="Event 2"
-                />
-                <!-- <div class="name-box-event">Event 2</div> -->
-              </a>
-            </div>
-
-            <div class="swiper-slide">
-              <a href="gallery.html" style="text-decoration: none">
-                <img
-                  src="images/events/coming-soon-event.webp"
-                  class="img-fluid object-cover"
-                  alt="Event 3"
-                />
-                <!-- <div class="name-box-event">Event 3</div> -->
-              </a>
-            </div>
-          </div>
-
-          <!-- Pagination -->
-          <div class="swiper-pagination"></div>
+        <div class="events-image">
+          <a href="gallery.html">
+            <img src="images/eventsbanner.jpg" alt="Events Exhibition"
+          /></a>
         </div>
       </section>
+      <!-- Swiper Container -->
+      <!-- <div class="swiper eventSwiper">
+        <div class="swiper-wrapper">
+         
+          <div class="swiper-slide">
+            <a href="gallery.html" style="text-decoration: none">
+              <img
+                src="images/events/banner-1-1-min.png"
+                class="img-fluid object-cover"
+                alt="Event 1"
+              />
+          
+            </a>
+          </div>
 
+          <div class="swiper-slide">
+            <a href="gallery.html" style="text-decoration: none">
+              <img
+                src="images/events/image.png"
+                class="img-fluid object-cover"
+                alt="Event 2"
+              />
+              
+            </a>
+          </div>
+
+          <div class="swiper-slide">
+            <a href="gallery.html" style="text-decoration: none">
+              <img
+                src="images/events/coming-soon-event.webp"
+                class="img-fluid object-cover"
+                alt="Event 3"
+              />
+             
+            </a>
+          </div>
+        </div>
+
+    
+        <div class="swiper-pagination"></div>
+        </div> -->
       <!-- Artwork Slider Section -->
       <section class="artwork-slider-section" id="artwork">
         <div class="artwork-slider-header">
-          <h2>Curated Collections</h2>
-          <p>
-            Showcasing curated works that define the language of art and design.
-          </p>
+          <h2>Glimpse</h2>
+          <p>A glance at the ideas and moments that define Gallery MOLD.</p>
           <!-- <a href="#" class="view-all">View All</a>
           <div style="clear: both"></div> -->
         </div>
@@ -689,7 +822,7 @@
             </div>
 
             <!-- Artwork Card 4 -->
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <img
                 src="images/curated/4.webp"
                 alt="Artwork 4"
@@ -698,9 +831,9 @@
               <div class="artwork-info" style="display: none">
                 <div class="artwork-title">Contemporary Forms</div>
                 <div class="artwork-artist">Artist: Snehal Pradhan</div>
-                <!-- <a href="#" class="buy-now-btn">Inquire Now</a> -->
+          
               </div>
-            </div>
+            </div> -->
 
             <!-- Artwork Card 5 -->
             <div class="swiper-slide">
@@ -717,7 +850,7 @@
             </div>
 
             <!-- Artwork Card 6 -->
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <img
                 src="images/curated/6.webp"
                 alt="Artwork 6"
@@ -726,11 +859,11 @@
               <div class="artwork-info" style="display: none">
                 <div class="artwork-title">Mixed Media Magic</div>
                 <div class="artwork-artist">Artist: Nidhi Sabhaya</div>
-                <!-- <a href="#" class="buy-now-btn">Buy Now</a> -->
+
               </div>
-            </div>
+            </div> -->
             <!-- Artwork Card 7 -->
-            <div class="swiper-slide">
+            <!-- <div class="swiper-slide">
               <img
                 src="images/curated/7.webp"
                 alt="Artwork 7"
@@ -739,9 +872,9 @@
               <div class="artwork-info" style="display: none">
                 <div class="artwork-title">Mixed Media Magic</div>
                 <div class="artwork-artist">Artist: Nidhi Sabhaya</div>
-                <!-- <a href="#" class="buy-now-btn">Buy Now</a> -->
+               
               </div>
-            </div>
+            </div> -->
             <!-- Artwork Card 8 -->
             <div class="swiper-slide">
               <img
@@ -919,7 +1052,7 @@
       </section>
 
       <!-- Youtube Shorts Section -->
-      <section class="ytcarusal-section" id="ytglimps">
+      <section class="ytcarusal-section" id="ytGlimpse">
         <div class="ytcarusal-section-top">
           <h2>Youtube Shorts</h2>
           <p>Discover upcoming events / exhibitions!</p>
@@ -1179,10 +1312,7 @@
               class="mb-3 mt-3 footer-logo"
               style="max-width: 150px"
             />
-            <p class="footer-text">
-              Explores the aesthetic and conceptual dimensions of modern times,
-              bridging innovative practices.
-            </p>
+            <p class="footer-text"></p>
           </div>
 
           <div class="col-lg-3 mb-4 sitemap">
@@ -1190,14 +1320,14 @@
             <ul class="list-unstyled">
               <!-- <li><a href="#artwork">ART WORKS</a></li>
               <li><a href="#exhibitions">EXHIBITIONS</a></li>
-              <li><a href="#ytglimps">GLIMPS</a></li>
+              <li><a href="#ytGlimpse">Glimpse</a></li>
               <li><a href="#event">EVENTS</a></li>
               <li><a href="contact.html">CONTACT</a></li> -->
 
               <li><a href="#about">ABOUT US</a></li>
               <li><a href="#exhibitions">EVENT</a></li>
-              <li><a href="#artwork">GLIMPS</a></li>
-              <li><a href="#contactus">CONTACT US</a></li>
+              <li><a href="#artwork">Glimpse</a></li>
+              <li><a href="#contactus">CONTACT</a></li>
             </ul>
           </div>
 
@@ -1229,7 +1359,7 @@
               © Gallery Mold. Developed by
               <a href="" target="_blank" class="diwizon">Diwizon.</a>
             </p>
-            <div class="footer-social">
+            <!-- <div class="footer-social">
               <a
                 href="https://www.instagram.com/the_gallerymold/"
                 target="_blank"
@@ -1244,7 +1374,7 @@
                   alt="LinkedIn"
                   class="social-icon"
               /></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </footer>

@@ -484,6 +484,7 @@
       .story-section {
         max-width: 1200px;
         margin: 0 auto 80px;
+        padding: 20px;
       }
 
       .story-grid {
@@ -503,7 +504,7 @@
       }
 
       .story-text {
-        padding: 2rem;
+        /* padding: 2rem; */
       }
 
       .story-text h3 {
@@ -513,12 +514,22 @@
       }
 
       .story-text p {
-        font-size: 1.1rem;
+        font-size: 20px;
         line-height: 1.8;
         color: #666;
         margin-bottom: 1rem;
+        font-family: "Barlow", sans-serif;
       }
-
+      .story-text p::first-letter {
+        font-size: 3em;
+        font-weight: bold;
+        float: left;
+        line-height: 1;
+        margin-right: 0.1em;
+        padding-right: 8px;
+        color: #693c0d;
+        font-family: "Georgia", serif;
+      }
       /* Values Section */
       .values-section {
         margin-top: 100px;
@@ -809,7 +820,7 @@
         </li>
         <li>
           <span class="bar blue"></span>
-          <a href="index.html#artwork">Glimps</a>
+          <a href="index.html#artwork">Glimpse</a>
         </li>
         <li>
           <span class="bar green"></span>
@@ -834,7 +845,7 @@
       <ul>
         <li><a href="index.html#about" class="link-1">About us</a></li>
         <li><a href="index.html#exhibitions" class="link-2">Event</a></li>
-        <li><a href="index.html#artwork" class="link-3">Glimps</a></li>
+        <li><a href="index.html#artwork" class="link-3">Glimpse</a></li>
         <li><a href="index.html#contactus" class="link-4">Contact Us</a></li>
       </ul>
     </aside>
@@ -853,7 +864,7 @@
       </section>
 
       <!-- About Content -->
-      <div class="about-content">
+      <div class="" style="padding-top: 100px">
         <!-- Story Section -->
         <section class="story-section">
           <h2 class="section-title">Our Story</h2>
@@ -865,31 +876,31 @@
               class="story-image"
             />
             <div class="story-text">
-              <h3>A Vision for Contemporary Art</h3>
+              <!-- <h3>A Vision for Contemporary Art</h3> -->
               <p>
-                Gallery MOLD began just six months ago with a simple dream — to
-                create a space in Vadodara where young and emerging artists
-                could grow and share their voices. Vadodara has always been a
-                city rich in art and culture, and we wanted to add a new chapter
-                to that story. Our vision is to build a community where
-                creativity thrives and young audiences can experience art that
-                inspires, challenges, and connects.
+                Gallery MOLD was founded six months ago with a vision to create
+                a space in Vadodara for young and emerging artists to grow and
+                share their voices. Designed with an international outlook, it
+                brings a fresh, contemporary approach to art—celebrating modern
+                ideas, experimental works, and interactive experiences. Founded
+                by art enthusiast Shilpa Parikh, MOLD reflects her belief in
+                Vadodara’s creative potential and its place on the global art
+                map.
               </p>
             </div>
           </div>
 
           <div class="story-grid">
             <div class="story-text">
-              <h3>Curating Excellence</h3>
+              <!-- <h3>Curating Excellence</h3> -->
               <p>
-                Designed with an international outlook, Gallery MOLD brings a
-                fresh, contemporary lens to art. It’s a space where modern
-                ideas, experimental works, and interactive experiences come
-                together. Founded by *Shilpa Parikh*, an art enthusiast who has
-                explored galleries across the world, MOLD reflects her belief
-                that Vadodara holds immense creative potential. Through this
-                space, we hope to share that spirit with the world and help
-                shape the city’s next era of art and culture.
+                Our vision is to create a vibrant, contemporary space where
+                creativity thrives and art inspires connection. We empower
+                emerging artists through experimentation and collaboration,
+                while welcoming select businesses and exhibitions to engage with
+                this high-end venue. Rooted in authenticity, innovation, and
+                excellence, we uphold international standards and enrich
+                Vadodara’s cultural landscape.
               </p>
             </div>
             <img
@@ -900,55 +911,9 @@
           </div>
         </section>
       </div>
-      <!-- Mission/Vision Section -->
-      <section class="mission-vision-section">
-        <div class="mission-vision-header">
-          <h2>Inside Gallery Mold</h2>
-          <p>Guiding principles that shape our journey!</p>
-        </div>
 
-        <div class="mission-vision-content">
-          <div class="mission-box">
-            <h3>Vision & Mission</h3>
-            <ul class="mission-list">
-              <li>To amplify the voices of young and emerging artists.</li>
-              <li>
-                Provide opportunities for experimentation, learning, and growth.
-              </li>
-              <li>
-                Support artists, designers and businesses at critical career
-                junctures and to build the cultural landscape for the city of
-                Vadodara.
-              </li>
-              <li>
-                Collaborations with artists, curators, designers and selected
-                businesses.
-              </li>
-            </ul>
-          </div>
-
-          <!-- <div class="vision-box">
-            <h3>Vision</h3>
-            <ul class="mission-list">
-              <li>To amplify the voices of young and emerging artists.</li>
-              <li>
-                Provide opportunities for experimentation, learning, and growth.
-              </li>
-              <li>
-                Support artists, designers and businesses at critical career
-                junctures and to build the cultural landscape for the city of
-                Vadodara.
-              </li>
-              <li>
-                Collaborations with artists, curators, designers and selected
-                businesses.
-              </li>
-            </ul>
-          </div> -->
-        </div>
-      </section>
       <!-- Values Section -->
-      <section class="values-section">
+      <section class="values-section" style="display: none">
         <h2 class="section-title">Our Values</h2>
         <div class="values-grid">
           <div class="value-card">
@@ -1099,10 +1064,7 @@
               class="mb-3 footer-logo"
               style="max-width: 150px"
             />
-            <p class="footer-text">
-              Explores the aesthetic and conceptual dimensions of modern times,
-              bridging innovative practices.
-            </p>
+            <p class="footer-text"></p>
           </div>
 
           <div class="col-lg-3 mb-4 sitemap">
@@ -1110,7 +1072,7 @@
             <ul class="list-unstyled">
               <li><a href="index.html#about">ABOUT US</a></li>
               <li><a href="index.html#exhibitions">EVENTS</a></li>
-              <li><a href="index.html#artwork">GLIMPS</a></li>
+              <li><a href="index.html#artwork">Glimpse</a></li>
               <!-- <li><a href="#event">EVENTS</a></li> -->
               <li><a href="contact.html">CONTACT</a></li>
             </ul>
@@ -1144,7 +1106,7 @@
               © Gallery Mold. Developed by
               <a href="" target="_blank" class="diwizon">Diwizon.</a>
             </p>
-            <div class="footer-social">
+            <!-- <div class="footer-social">
               <a
                 href="https://www.instagram.com/the_gallerymold/"
                 target="_blank"
@@ -1159,7 +1121,7 @@
                   alt="LinkedIn"
                   class="social-icon"
               /></a>
-            </div>
+            </div> -->
           </div>
         </div>
       </footer>
