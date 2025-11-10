@@ -182,8 +182,8 @@
         font-size: 14px;
         font-family: "Barlow", sans-serif;
         font-weight: 300;
-        max-width: 100px;
-        min-width: 100px;
+        /* max-width: 100px;
+        min-width: 100px; */
       }
 
       .top-right p {
@@ -786,7 +786,7 @@
         <a href="#"><img src="images/email.png" alt="Email" /></a> -->
         <button
           class="booknow-btn"
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thegallerymold/30min'});return false;"
+          onclick="window.location.href='contact.html'"
         >
           Book Now
         </button>
@@ -797,7 +797,9 @@
         </a>
       </div>
       <div class="top-right">
-        <p><a href="index.html">Back to Home</a></p>
+        <a href="index.html" aria-label="Home">
+          <i class="fa-solid fa-house"></i>
+        </a>
       </div>
     </header>
 
