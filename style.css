@@ -840,6 +840,9 @@ li {
     width: 100%;
     max-width: 300px;
   }
+  .diwizon {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 480px) {

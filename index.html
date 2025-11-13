@@ -566,7 +566,7 @@
       <section class="about-us" id="about">
         <div class="row">
           <div class="about-img col-md-5 col-sm-12">
-            <img src="images/aboutmain.webp" class="img-fluid" />
+            <img src="images/about1.webp" class="img-fluid" />
           </div>
           <div class="about-content col-md-6 col-sm-12">
             <h2>About us</h2>
@@ -1363,7 +1363,9 @@
           >
             <p class="mb-2 mb-md-0">
               © Gallery Mold. Developed by
-              <a href="" target="_blank" class="diwizon">Diwizon.</a>
+              <a href="https://diwizon.com/" target="_blank" class="diwizon"
+                >Diwizon.</a
+              >
             </p>
             <!-- <div class="footer-social">
               <a
@@ -1705,7 +1707,6 @@
           },
         },
       });
-
       var swiper = new Swiper(".ytSwiper", {
         slidesPerView: 4,
         spaceBetween: 20,
@@ -1720,10 +1721,11 @@
           prevEl: ".swiper-button-prev",
         },
         breakpoints: {
-          320: { slidesPerView: 1 },
-          576: { slidesPerView: 2 },
-          768: { slidesPerView: 4 },
-          992: { slidesPerView: 4 },
+          1400: { slidesPerView: 4 }, // XL desktops
+          992: { slidesPerView: 3 }, // desktops
+          768: { slidesPerView: 2 }, // tablets
+          576: { slidesPerView: 1.5 }, // small phones (shows 1½ slides)
+          0: { slidesPerView: 1 }, // extra small (<=480)
         },
       });
 

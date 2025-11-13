@@ -28,7 +28,7 @@
     <meta property="og:url" content="https://gallerymold.com/gallery.html" />
     <meta property="og:type" content="website" />
 
-    <title>Exhibitions - Gallery Mold</title>
+    <title>Events - Gallery Mold</title>
     <link
       rel="stylesheet"
       href="fonts/Erode_Complete/Fonts/WEB/css/erode.css"
@@ -410,7 +410,7 @@
 
       .gallery-item img {
         width: 100%;
-        height: 300px;
+        height: auto !important;
         object-fit: cover;
         transition: transform 0.3s ease;
       }
@@ -547,7 +547,7 @@
         }
 
         .gallery-item img {
-          height: 250px;
+          height: auto;
         }
       }
 
@@ -681,16 +681,16 @@
     </div>
 
     <!-- Top Navbar -->
-    <header class="top-navbar" style="padding-left: 128px">
+    <header class="top-navbar" style="padding-left: 90px">
       <div class="top-left">
         <!-- <a href="#"><img src="images/call.png" /></a>
         <a href="#"><img src="images/email.png" /></a> -->
-        <button
+        <!-- <button
           class="booknow-btn"
-          onclick="window.location.href='contact.html'"
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thegallerymold/30min'});return false;"
         >
           Book Now
-        </button>
+        </button> -->
       </div>
       <div class="top-center">
         <a href="index.html" class="logo"
@@ -715,15 +715,14 @@
       <ul class="menu-items">
         <li>
           <span class="bar yellow"></span
-          ><a href="index.html#exhibitions">Exhibitions</a>
+          ><a href="index.html#about">About us</a>
         </li>
         <li>
           <span class="bar orange"></span
-          ><a href="index.html#artwork">Art Works</a>
+          ><a href="index.html#exhibitions">Event</a>
         </li>
         <li>
-          <span class="bar blue"></span
-          ><a href="index.html#ytGlimpse">Glimpse</a>
+          <span class="bar blue"></span><a href="index.html#artwork">Glimpse</a>
         </li>
         <li>
           <span class="bar green"></span
@@ -747,9 +746,9 @@
     <!-- Left Sidebar -->
     <aside class="left-sidebar">
       <ul>
-        <li><a href="index.html#exhibitions" class="link-1">Exhibitions</a></li>
-        <li><a href="index.html#artwork" class="link-2">Art Works</a></li>
-        <li><a href="index.html#ytGlimpse" class="link-3">Glimpse</a></li>
+        <li><a href="index.html#about" class="link-1">About us</a></li>
+        <li><a href="index.html#exhibitions" class="link-2">Event</a></li>
+        <li><a href="index.html#artwork" class="link-3">Glimpse</a></li>
         <li><a href="index.html#contactus" class="link-4">Contact Us</a></li>
         <!-- <li><a href="gallery.html" class="link-4">gallery</a></li> -->
       </ul>
@@ -816,177 +815,175 @@
       const galleryData = [
         {
           id: 1,
-          title: "Abstract Expression",
-          artist: "Eva Joy",
+          title: "The Empty Suits (Terracotta)",
+          artist: "Jithin Jayakumar",
           category: "sediments",
-          image: "images/sediments/8.webp",
+          image: "images/sediments/1.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Jithin tries to tell stories of how we adapt, survive & find the balance amidst the shifting sands of time.",
         },
         {
           id: 2,
-          title: "Abstract Expression ",
-          artist: "Eva Joy",
+          title: "Elephant series",
+          artist: "Dushaynt Patel",
           category: "sediments",
-          image: "images/sediments/9.webp",
+          image: "images/sediments/2.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "This brass art work, uses everyday metaphors & brings an element of familiarity in the mind of the viewer.",
         },
         {
           id: 3,
-          title: "Abstract Expression",
-          artist: "Eva Joy",
+          title: "Waiting for the  first raindrop",
+          artist: "Hiren Patel",
           category: "sediments",
-          image: "images/sediments/11.webp",
+          image: "images/sediments/3.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Each brush strokes reflects his commitemnt to documenting therealities & nuance of village life, revealing the spirit of resilience.",
         },
         {
           id: 4,
-          title: "Abstract Expression",
-          artist: "Eva Joy",
+          title: "Survival of the fittest-1",
+          artist: "Dushayant Patel",
           category: "sediments",
-          image: "images/sediments/13.webp",
+          image: "images/sediments/4.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "It inspires from the heritage of indian litrature like that of panchtantra and jataka kathas.",
         },
         {
           id: 5,
-          title: "Abstract Expression",
-          artist: "Eva Joy",
+          title: "Manthan (Churning)",
+          artist: "Hardik Chavda",
           category: "sediments",
-          image: "images/sediments/17.webp",
+          image: "images/sediments/5.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "He tries to unflod the ancient art of architecture to understand space, material & theories using ceramics as a medium.",
         },
         {
           id: 6,
-          title: "Abstract Expression",
-          artist: "Eva Joy",
+          title: "Safe House",
+          artist: "Nalinakshya Talukdar",
           category: "sediments",
-          image: "images/sediments/23.webp",
+          image: "images/sediments/6.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "He explores the possibilities by using various textured surfaces & turned out into beautiful art pieces of print.",
         },
 
         {
           id: 7,
-          title: "Old To Self",
-          artist: "Eva Joy",
+          title: "Man at man’s head",
+          artist: "Aakash Bhoya",
           category: "oldtoself",
-          image: "images/oldtoself/3.webp",
+          image: "images/oldtoself/1.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Aakash Bhoya breathes motion into metals, capturing the balance between strength & spirit.",
         },
         {
           id: 8,
-          title: "Old To Self",
-          artist: "Eva Joy",
+          title: "Man on man’s head",
+          artist: "Aakash Bhoya",
           category: "oldtoself",
-          image: "images/oldtoself/9.webp",
+          image: "images/oldtoself/3.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Aakash bhoya shapes fluidity in form, capturing the rhythm & resilience of the human spirit.",
         },
         {
           id: 9,
-          title: "Old To Self",
-          artist: "Eva Joy",
+          title: "Lantern of Longing",
+          artist: "Pratima Tandal",
           category: "oldtoself",
-          image: "images/oldtoself/14.webp",
+          image: "images/oldtoself/2.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Pratima Tandal paints moments of stillness, where mystery & light quietly converse.",
         },
         {
           id: 10,
-          title: "Old To Self",
-          artist: "Eva Joy",
+          title: "Roots & Ruptures",
+          artist: "Pratima tandel",
           category: "oldtoself",
-          image: "images/oldtoself/10.webp",
+          image: "images/oldtoself/4.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "She creates ethereal narratives using soft light and movement to reveal the vulnerable intimacy of the human body..",
         },
         {
           id: 11,
-          title: "Old To Self",
-          artist: "Eva Joy",
+          title: "Vichrita’s Womb",
+          artist: "Archana Singh",
           category: "oldtoself",
-          image: "images/oldtoself/18.webp",
+          image: "images/oldtoself/5.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Archana Sculpts serenity from stone, capturing the quiet strength of human emotions.",
         },
         {
           id: 12,
-          title: "Old To Self",
-          artist: "Eva Joy",
+          title: "Palimpsest",
+          artist: "Pratima Tanda",
           category: "oldtoself",
-          image: "images/oldtoself/8.webp",
+          image: "images/oldtoself/6.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Pratima tandal transforms light & texture into form, revealing beauty within the voids.",
         },
 
         {
           id: 13,
-          title: "exhibitions 1",
-          artist: "Eva Joy",
+          title: "Exhibitions",
+          artist: "Gallery Mold",
           category: "exhibitions",
-          image: "images/exhibitions/e1.png",
+          image: "images/exhibitions/1.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Experience interactive and immersive art like never before - COMING SOON",
         },
-        {
-          id: 14,
-          title: "exhibitions 2",
-          artist: "Eva Joy",
-          category: "exhibitions",
-          image: "images/exhibitions/e2.png",
-          description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
-        },
-        {
-          id: 15,
-          title: "exhibitions 3",
-          artist: "Eva Joy",
-          category: "exhibitions",
-          image: "images/exhibitions/e3.png",
-          description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
-        },
+        // {
+        //   id: 14,
+        //   title: "Exhibitions 2",
+        //   artist: "Gallery Mold",
+        //   category: "exhibitions",
+        //   image: "images/exhibitions/e2.png",
+        //   description:
+        //     "Watch art, move & respond. join our live interactive live shows.",
+        // },
+        // {
+        //   id: 15,
+        //   title: "Exhibitions 3",
+        //   artist: "Gallery Mold",
+        //   category: "exhibitions",
+        //   image: "images/exhibitions/e3.png",
+        //   description:
+        //     "Step into art, our interactive live art shows will let you feel every strocks & story.",
+        // },
 
         {
           id: 16,
-          title: "talk show 1",
-          artist: "Eva Joy",
+          title: "",
+          artist: "Gallery Mold",
           category: "talkshows",
-          image: "images/talkshow/1.jpg",
+          image: "images/talkshow/1.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Gallery Mold hosted an inspiring talk bridging art, its history, and its impact on modern times.",
         },
         {
           id: 17,
-          title: "talk show 2",
-          artist: "Eva Joy",
+          title: "",
+          artist: "Gallery Mold",
           category: "talkshows",
-          image: "images/talkshow/2.jpg",
-          description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+          image: "images/talkshow/2.webp",
+          description: "Behind the scenes",
         },
         {
           id: 18,
-          title: "talk show 3",
-          artist: "Eva Joy",
+          title: "",
+          artist: "Gallery Mold",
           category: "talkshows",
-          image: "images/talkshow/3.jpg",
-          description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+          image: "images/talkshow/3.webp",
+          description: "A talk by Professor Shivaji K. Panikkar",
         },
         {
           id: 19,
-          title: "talk show 4",
-          artist: "Eva Joy",
+          title: "",
+          artist: "Gallery Mold",
           category: "talkshows",
-          image: "images/talkshow/gm.png",
+          image: "images/talkshow/4.webp",
           description:
-            "A vibrant exploration of color and form that captures the essence of human emotion.",
+            "Young artists engage in an inspiring learning session with Professor Shivaji K. Panikkar .",
         },
         // Add more items as needed
       ];
@@ -1049,10 +1046,10 @@
         galleryGrid.innerHTML = filteredData
           .map(
             (item) => `
-              <div class="gallery-item" data-id="${item.id}">
-                <img src="${item.image}" alt="${item.title}">
-              </div>
-            `
+                    <div class="gallery-item" data-id="${item.id}">
+                      <img src="${item.image}" alt="${item.title}">
+                    </div>
+                  `
           )
           .join("");
 
