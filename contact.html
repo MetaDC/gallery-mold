@@ -87,39 +87,6 @@
         font-family: "Erode-Variable", "Erode", serif !important;
         font-weight: 600;
       }
-      .loader-container {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #ffffff;
-        z-index: 99999999999;
-        visibility: visible;
-      }
-
-      /* Spinner Animation */
-      .spinner {
-        width: 50px;
-        height: 50px;
-        border: 5px solid #ccc;
-        border-top: 5px solid #3498db;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
-      }
 
       /* .popup-overlay {
             position: fixed;
@@ -533,13 +500,14 @@
     </div> -->
     <!-- Top Navbar -->
     <!-- Top Navbar -->
-    <header class="top-navbar" style="padding-left: 90px">
+    <header class="top-navbar" style="padding-left: 78px">
       <div class="top-left">
-        <!-- <a href="#"><img src="images/call.png" /></a>
-        <a href="#"><img src="images/email.png" /></a> -->
+        <!-- <a href="#"></a> -->
+        <!-- <a href="#"><img src="images/email.png" /></a> -->
+
         <!-- <button
           class="booknow-btn"
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thegallerymold/30min'});return false;"
+          onclick="window.location.href='contact.html'"
         >
           Book Now
         </button> -->
@@ -550,15 +518,42 @@
         /></a>
       </div>
       <div class="top-right">
-        <a href="index.html" aria-label="Home">
-          <i class="fa-solid fa-house"></i>
-        </a>
+        <a
+          href="https://www.instagram.com/the_gallerymold?igsh=MXFmZ2VueTg3dHdlOA=="
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/share/1FdxHAS2pW/"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://x.com/GalleryMold?t=FcOK1IZVj1Qe15M-XoKxvQ&s=08"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://wa.me/919925111805"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
       </div>
     </header>
 
     <!-- Mobile Navbar -->
     <header class="mobile-navbar">
-      <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo" />
+      <a href="index.html">
+        <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo"
+      /></a>
+
+      <!-- <button class="booknow-btn" onclick="window.location.href='contact.html'">
+        Book Now
+      </button> -->
       <div class="hamburger" id="toggleBtn">&#9776;</div>
     </header>
 

@@ -706,7 +706,15 @@
 
     <!-- Mobile Navbar -->
     <header class="mobile-navbar">
-      <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo" />
+      <a href="index.html"
+        ><img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo"
+      /></a>
+      <button
+        class="booknow-btn"
+        onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thegallerymold/30min'});return false;"
+      >
+        Book Now
+      </button>
       <div class="hamburger" id="toggleBtn">&#9776;</div>
     </header>
 

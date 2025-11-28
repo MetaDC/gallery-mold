@@ -24,7 +24,39 @@
   /* adjust weight */
   font-style: normal;
 }
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  z-index: 99999999999;
+  visibility: visible;
+}
 
+/* Spinner Animation */
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-top: 5px solid #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* ============================================
    GLOBAL RESET & BASE STYLES
    ============================================ */
@@ -838,7 +870,7 @@ li {
     padding: 10px 25px;
     font-size: 0.9rem;
     width: 100%;
-    max-width: 300px;
+    max-width: 200px;
   }
   .diwizon {
     font-size: 0.9rem;
@@ -847,9 +879,9 @@ li {
 
 @media (max-width: 480px) {
   .booknow-btn {
-    width: 35%;
+    width: 30%;
     padding: 6px 7px;
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 /* Artist Swiper */
@@ -1730,6 +1762,7 @@ li {
 }
 .mobile-navbar .booknow-btn {
   margin-left: auto;
+  margin-top: 10px;
   margin-right: 10px;
 }
 
