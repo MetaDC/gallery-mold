@@ -805,7 +805,10 @@
 
     <!-- Mobile Navbar -->
     <header class="mobile-navbar">
-      <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo" />
+      <a href="index.html">
+        <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo"
+      /></a>
+
       <div class="hamburger" id="toggleBtn">&#9776;</div>
     </header>
 
@@ -1096,7 +1099,13 @@
               Ground Floor, Naman House, Race Course,<br />Vadodara, Gujarat
               390007
             </p>
-            <a href="https://g.co/kgs/Zw49HVQ" target="_blank">GET DIRECTION</a>
+            <a href="https://g.co/kgs/Zw49HVQ" target="_blank">
+              <span class="icon">
+                <i class="fa-solid fa-location-dot"></i>
+              </span>
+
+              GET DIRECTION</a
+            >
           </div>
         </div>
 
@@ -1139,5 +1148,32 @@
       type="text/javascript"
       async
     ></script>
+    <script>
+      const toggleBtn = document.getElementById("toggleBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileNavbar = document.querySelector(".mobile-navbar");
+      const menuLinks = mobileMenu.querySelectorAll("a");
+
+      let isOpen = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isOpen = !isOpen;
+        if (isOpen) {
+          mobileMenu.style.right = "0";
+          mobileNavbar.style.display = "none";
+        } else {
+          mobileMenu.style.right = "-100%";
+          mobileNavbar.style.display = "flex";
+        }
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          isOpen = false;
+          mobileMenu.style.right = "-100%";
+          mobileNavbar.style.display = "flex";
+        });
+      });
+    </script>
   </body>
 </html>
