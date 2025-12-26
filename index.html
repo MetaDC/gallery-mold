@@ -353,6 +353,42 @@
       .events-image img:hover {
         transform: scale(1.02);
       }
+
+      .top-left-icons {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        gap: 15px;
+        align-items: center;
+      }
+
+      .top-left-icons a {
+        color: #333;
+        font-size: 20px;
+        transition: color 0.3s ease, transform 0.3s ease;
+        text-decoration: none;
+      }
+
+      .top-left-icons a:hover {
+        transform: scale(1.1);
+      }
+
+      .top-left-icons a:hover .fa-instagram {
+        color: #e4405f;
+      }
+
+      .top-left-icons a:hover .fa-facebook-f {
+        color: #1877f2;
+      }
+
+      .top-left-icons a:hover .fa-whatsapp {
+        color: #25d366;
+      }
+
+      .top-left-icons a:hover .fa-x-twitter {
+        color: #000;
+      }
     </style>
   </head>
 
@@ -442,6 +478,7 @@
         <li>
           <span class="bar green"></span><a href="#contactus">Contact Us</a>
         </li>
+
         <!-- <button
           class="booknow-btn"
           onclick="window.location.href='contact.html'"
@@ -450,16 +487,31 @@
         </button> -->
         <!-- <li><span class="bar green"></span><a href="gallery.html">gallery</a></li> -->
       </ul>
-
-      <div class="nav-footer-links">
-        <div>
-          <p><a href="#about">About Us</a></p>
-          <p><a href="contact.html">Contact Us</a></p>
-        </div>
-        <div>
-          <p>Also Checkout</p>
-          <p><a href="https://atelierbaroda.com/">atelierbaroda.com</a></p>
-        </div>
+      <div class="top-right">
+        <a
+          href="https://www.instagram.com/the_gallerymold?igsh=MXFmZ2VueTg3dHdlOA=="
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/share/1FdxHAS2pW/"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://x.com/GalleryMold?t=FcOK1IZVj1Qe15M-XoKxvQ&s=08"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://wa.me/919925111805"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
       </div>
     </div>
     <!-- Left Sidebar -->
@@ -478,30 +530,39 @@
       <!-- Banner Section -->
       <section class="banner-slide">
         <div class="custom-carousel">
-          <!-- <div class="carousel-slide ">
-          <img src="images/banner-1-1-min.png" class="img-fluid" />
-        </div> -->
-
-          <!-- Add 4 more slides -->
+          <!-- Slide 1 (Desktop + Mobile image switch) -->
           <div class="carousel-slide active">
-            <img src="images/hero/verve-banner.webp" class="img-fluid" />
+            <picture>
+              <!-- Mobile -->
+              <source
+                srcset="images/hero/vervemob.webp"
+                media="(max-width: 767px)"
+              />
+              <!-- Desktop -->
+              <img
+                src="images/hero/verve-banner.webp"
+                class="img-fluid"
+                alt="Verve Banner"
+              />
+            </picture>
           </div>
+
+          <!-- Slide 2 -->
           <div class="carousel-slide">
-            <img src="images/hero/1.webp" class="img-fluid" />
+            <img src="images/hero/1.webp" class="img-fluid" alt="Slide 2" />
           </div>
+
+          <!-- Slide 3 -->
           <div class="carousel-slide">
-            <img src="images/hero/2.webp" class="img-fluid" />
+            <img src="images/hero/2.webp" class="img-fluid" alt="Slide 3" />
           </div>
-          <!-- <div class="carousel-slide">
-            <img src="images/hero-4-min.png" class="img-fluid" />
-          </div> -->
 
           <!-- Arrows -->
           <button class="arrow left">
-            <img src="images/left-arrow.png" />
+            <img src="images/left-arrow.png" alt="Previous" />
           </button>
           <button class="arrow right">
-            <img src="images/right-arrow.png" />
+            <img src="images/right-arrow.png" alt="Next" />
           </button>
 
           <!-- Dots -->
@@ -509,7 +570,6 @@
             <span class="dot active"></span>
             <span class="dot"></span>
             <span class="dot"></span>
-            <!-- <span class="dot"></span> -->
           </div>
         </div>
       </section>

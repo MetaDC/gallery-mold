@@ -161,8 +161,6 @@
         font-size: 14px;
         font-family: "Barlow", sans-serif;
         font-weight: 300;
-        /* max-width: 100px;
-        min-width: 100px; */
       }
 
       .top-right p {
@@ -197,7 +195,6 @@
       .left-sidebar ul li {
         flex: 1;
         min-height: 80px;
-        /* Minimum height for each item */
       }
 
       .left-sidebar a {
@@ -448,6 +445,99 @@
         margin-bottom: 0;
       }
 
+      /* Verve Specific Layout */
+      .verve-item {
+        display: flex;
+        gap: 2rem;
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        margin-bottom: 2rem;
+        min-height: 300px;
+      }
+
+      .verve-item:hover {
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        transform: translateY(-3px);
+      }
+
+      .verve-image {
+        flex: 0 0 45%;
+        overflow: hidden;
+      }
+
+      .verve-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .verve-item:hover .verve-image img {
+        transform: scale(1.05);
+      }
+
+      .verve-details {
+        flex: 1;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .verve-details h3 {
+        font-family: "Barlow Semi Condensed", sans-serif;
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+        color: #333;
+      }
+
+      .verve-details .artist-name {
+        font-size: 1.2rem;
+        color: #666;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+      }
+
+      .verve-info {
+        margin-bottom: 1.5rem;
+      }
+
+      .verve-info p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .verve-info strong {
+        color: #333;
+        font-weight: 600;
+      }
+
+      .enquiry-btn {
+        align-self: flex-start;
+        padding: 12px 30px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-family: "Barlow", sans-serif;
+        font-size: 1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .enquiry-btn:hover {
+        background: #555;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+
       /* Modal */
       .gallery-modal {
         display: none;
@@ -471,6 +561,30 @@
         overflow: hidden;
       }
 
+      /* Default modal layout (for non-Verve items) */
+      .modal-content.default-layout {
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Verve modal layout (image left, details right) */
+      .modal-content.verve-layout {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        width: 90%;
+        max-height: 80vh;
+      }
+
+      .modal-image-container {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #f5f5f5;
+        overflow: hidden;
+      }
+
       .modal-image {
         width: 100%;
         height: auto;
@@ -478,15 +592,90 @@
         object-fit: contain;
       }
 
+      .verve-layout .modal-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
       .modal-info {
         padding: 2rem;
         text-align: center;
+      }
+
+      /* Verve modal info styling */
+      .verve-layout .modal-info {
+        flex: 1;
+        padding: 3rem;
+        text-align: left;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
       }
 
       .modal-info h3 {
         font-family: "Barlow Semi Condensed", sans-serif;
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
+      }
+
+      .verve-layout .modal-info h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .modal-artist-name {
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 2rem;
+        font-weight: 500;
+      }
+      .modal-img-price {
+        font-size: 1.3rem;
+        color: #666;
+        margin-bottom: 1rem;
+        font-weight: 500;
+      }
+      .modal-details {
+        margin-bottom: 2rem;
+      }
+
+      .modal-details p {
+        margin: 0.8rem 0;
+        font-size: 1.1rem;
+        color: #555;
+      }
+
+      .modal-details strong {
+        color: #333;
+        font-weight: 600;
+        display: inline-block;
+        min-width: 80px;
+      }
+
+      .modal-enquiry-btn {
+        align-self: flex-start;
+        padding: 14px 35px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-family: "Barlow", sans-serif;
+        font-size: 1.1rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 1rem;
+      }
+
+      .modal-enquiry-btn:hover {
+        background: #555;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
       }
 
       .close {
@@ -504,96 +693,47 @@
         opacity: 0.7;
       }
 
-      /* Responsive */
-      @media (max-width: 870px) {
-        .left-sidebar {
-          display: none;
-        }
-
-        .main-content {
-          width: 100%;
-          margin-left: 0;
-          padding: 0 1rem;
-        }
-
-        .top-navbar {
-          display: none;
-        }
-
-        .mobile-navbar {
-          display: flex !important;
-        }
-
-        .gallery-header {
-          padding: 40px 0 30px;
-        }
-
-        .gallery-header h1 {
-          font-size: 2.5rem;
-        }
-
-        .filter-tabs {
-          gap: 1rem;
-        }
-
-        .filter-btn {
-          padding: 10px 20px;
-          font-size: 0.9rem;
-        }
-
-        .gallery-grid {
-          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-          gap: 1.5rem;
-        }
-
-        .gallery-item img {
-          height: auto;
-        }
-      }
-
-      @media (max-width: 480px) {
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 1rem;
-        }
-
-        .gallery-header h1 {
-          font-size: 2rem;
-        }
-
-        .filter-tabs {
-          flex-direction: column;
-          align-items: center;
-          gap: 0.5rem;
-        }
-      }
-      .filter-tabs {
-        display: flex;
-        gap: 15px;
-        margin-bottom: 30px;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      .filter-btn {
-        padding: 12px 24px;
-        border: 2px solid #333;
-        background: white;
+      /* Navigation Arrows */
+      .modal-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        font-size: 30px;
+        padding: 20px 15px;
         cursor: pointer;
-        font-size: 16px;
-        font-weight: 600;
+        border: none;
         transition: all 0.3s ease;
-        border-radius: 8px;
+        z-index: 10001;
+        border-radius: 5px;
       }
 
-      .filter-btn:hover {
-        background: #333;
-        color: white;
+      .modal-nav:hover {
+        background: white;
+        transform: translateY(-50%) scale(1.1);
       }
 
-      .filter-btn.active {
-        background: #333;
-        color: white;
+      .modal-nav:active {
+        transform: translateY(-50%) scale(0.95);
+      }
+
+      .modal-prev {
+        left: 20px;
+      }
+
+      .modal-next {
+        right: 20px;
+      }
+
+      .modal-nav:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
+
+      .modal-nav:disabled:hover {
+        transform: translateY(-50%) scale(1);
+        background: rgba(255, 255, 255, 0.9);
       }
 
       /* Dropdown Container */
@@ -672,6 +812,172 @@
         background: #333;
         color: white;
       }
+
+      /* Responsive */
+      @media (max-width: 870px) {
+        .left-sidebar {
+          display: none;
+        }
+
+        .main-content {
+          width: 100%;
+          margin-left: 0;
+          padding: 0 1rem;
+        }
+
+        .top-navbar {
+          display: none;
+        }
+
+        .mobile-navbar {
+          display: flex !important;
+        }
+
+        .gallery-header {
+          padding: 40px 0 30px;
+        }
+
+        .gallery-header h1 {
+          font-size: 2.5rem;
+        }
+
+        .filter-tabs {
+          gap: 1rem;
+        }
+
+        .filter-btn {
+          padding: 10px 20px;
+          font-size: 0.9rem;
+        }
+
+        .gallery-grid {
+          grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .gallery-item img {
+          height: auto;
+        }
+
+        .verve-item {
+          flex-direction: column;
+          min-height: auto;
+        }
+
+        .verve-image {
+          flex: 0 0 auto;
+          height: 250px;
+        }
+
+        .verve-details {
+          padding: 1.5rem;
+        }
+
+        /* Verve modal responsive */
+        .modal-content.verve-layout {
+          flex-direction: column;
+          max-width: 95%;
+          width: 95%;
+        }
+
+        .modal-image-container {
+          flex: 0 0 auto;
+          max-height: 40vh;
+        }
+
+        .verve-layout .modal-info {
+          padding: 2rem;
+        }
+
+        .verve-layout .modal-info h3 {
+          font-size: 1.5rem;
+        }
+
+        .modal-artist-name {
+          font-size: 1.1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .modal-details p {
+          font-size: 1rem;
+        }
+
+        .modal-nav {
+          font-size: 24px;
+          padding: 15px 10px;
+        }
+
+        .modal-prev {
+          left: 10px;
+        }
+
+        .modal-next {
+          right: 10px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .gallery-header h1 {
+          font-size: 2rem;
+        }
+
+        .filter-tabs {
+          flex-direction: column;
+          align-items: center;
+          gap: 0.5rem;
+        }
+
+        .verve-details h3 {
+          font-size: 1.4rem;
+        }
+
+        .verve-details .artist-name {
+          font-size: 1rem;
+        }
+
+        .verve-info p {
+          font-size: 0.9rem;
+        }
+
+        .verve-layout .modal-info {
+          padding: 1.5rem;
+        }
+
+        .verve-layout .modal-info h3 {
+          font-size: 1.3rem;
+        }
+
+        .modal-artist-name {
+          font-size: 1rem;
+        }
+
+        .modal-details p {
+          font-size: 0.9rem;
+        }
+
+        .modal-enquiry-btn {
+          padding: 12px 28px;
+          font-size: 1rem;
+        }
+
+        .modal-nav {
+          font-size: 20px;
+          padding: 12px 8px;
+        }
+
+        .modal-prev {
+          left: 5px;
+        }
+
+        .modal-next {
+          right: 5px;
+        }
+      }
     </style>
   </head>
 
@@ -682,16 +988,7 @@
 
     <!-- Top Navbar -->
     <header class="top-navbar" style="padding-left: 90px">
-      <div class="top-left">
-        <!-- <a href="#"><img src="images/call.png" /></a>
-        <a href="#"><img src="images/email.png" /></a> -->
-        <!-- <button
-          class="booknow-btn"
-          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/thegallerymold/30min'});return false;"
-        >
-          Book Now
-        </button> -->
-      </div>
+      <div class="top-left"></div>
       <div class="top-center">
         <a href="index.html" class="logo"
           ><img src="images/gallerymold-logo-mob.png"
@@ -736,18 +1033,32 @@
           <span class="bar green"></span
           ><a href="index.html#contactus">Contact Us</a>
         </li>
-        <!-- <li><span class="bar green"></span><a href="gallery.html">gallery</a></li> -->
       </ul>
-
-      <div class="nav-footer-links">
-        <div>
-          <p><a href="#about">About Us</a></p>
-          <p><a href="contact.html">Contact Us</a></p>
-        </div>
-        <div>
-          <p>Also Checkout</p>
-          <p><a href="https://atelierbaroda.com/">atelierbaroda.com</a></p>
-        </div>
+      <div class="top-right">
+        <a
+          href="https://www.instagram.com/the_gallerymold?igsh=MXFmZ2VueTg3dHdlOA=="
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.facebook.com/share/1FdxHAS2pW/"
+          target="_blank"
+          aria-label="Facebook"
+          ><i class="fa-brands fa-facebook-f"></i
+        ></a>
+        <a
+          href="https://x.com/GalleryMold?t=FcOK1IZVj1Qe15M-XoKxvQ&s=08"
+          target="_blank"
+          aria-label="Twitter"
+          ><i class="fa-brands fa-x-twitter"></i
+        ></a>
+        <a
+          href="https://wa.me/919925111805"
+          target="_blank"
+          aria-label="WhatsApp"
+          ><i class="fa-brands fa-whatsapp"></i
+        ></a>
       </div>
     </div>
 
@@ -758,7 +1069,6 @@
         <li><a href="index.html#exhibitions" class="link-2">Event</a></li>
         <li><a href="index.html#artwork" class="link-3">Glimpse</a></li>
         <li><a href="index.html#contactus" class="link-4">Contact Us</a></li>
-        <!-- <li><a href="gallery.html" class="link-4">gallery</a></li> -->
       </ul>
     </aside>
 
@@ -784,6 +1094,7 @@
             </div>
             <div class="dropdown-item" data-filter="sediments">Sediments</div>
             <div class="dropdown-item" data-filter="oldtoself">Old To Self</div>
+            <div class="dropdown-item" data-filter="verve">Verve</div>
           </div>
         </div>
 
@@ -795,31 +1106,26 @@
       </div>
 
       <!-- Gallery Grid -->
-      <div class="gallery-grid" id="galleryGrid">
-        <!-- Gallery items will be populated by JavaScript -->
-        <!-- <div class="gallery-item" data-id="${item.id}">
-          <img src="${item.image}" alt="${item.title}" />
-          <div class="gallery-overlay">
-            <h3>${item.title}</h3>
-            <p>by ${item.artist}</p>
-          </div>
-        </div> -->
-      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
     </main>
 
-    <!-- Modal -->
+    <!-- Modal with Navigation Arrows -->
     <div id="galleryModal" class="gallery-modal">
       <span class="close" id="modalClose">&times;</span>
-      <div class="modal-content">
-        <img class="modal-image" id="modalImage" src="" alt="" />
-        <div class="modal-info">
+      <button class="modal-nav modal-prev" id="modalPrev">&#10094;</button>
+      <button class="modal-nav modal-next" id="modalNext">&#10095;</button>
+      <div class="modal-content" id="modalContent">
+        <div class="modal-image-container">
+          <img class="modal-image" id="modalImage" src="" alt="" />
+        </div>
+        <div class="modal-info" id="modalInfo">
           <h3 id="modalTitle"></h3>
           <p id="modalDescription"></p>
         </div>
       </div>
     </div>
     <script>
-      // Gallery data
+      // Gallery data - Updated with detailed Verve information
       const galleryData = [
         {
           id: 1,
@@ -878,7 +1184,7 @@
 
         {
           id: 7,
-          title: "Man at man’s head",
+          title: "Man at man's head",
           artist: "Aakash Bhoya",
           category: "oldtoself",
           image: "images/oldtoself/1.webp",
@@ -887,7 +1193,7 @@
         },
         {
           id: 8,
-          title: "Man on man’s head",
+          title: "Man on man's head",
           artist: "Aakash Bhoya",
           category: "oldtoself",
           image: "images/oldtoself/3.webp",
@@ -914,7 +1220,7 @@
         },
         {
           id: 11,
-          title: "Vichrita’s Womb",
+          title: "Vichrita's Womb",
           artist: "Archana Singh",
           category: "oldtoself",
           image: "images/oldtoself/5.webp",
@@ -940,27 +1246,79 @@
           description:
             "Experience interactive and immersive art like never before - COMING SOON",
         },
-        // {
-        //   id: 14,
-        //   title: "Exhibitions 2",
-        //   artist: "Gallery Mold",
-        //   category: "exhibitions",
-        //   image: "images/exhibitions/e2.png",
-        //   description:
-        //     "Watch art, move & respond. join our live interactive live shows.",
-        // },
-        // {
-        //   id: 15,
-        //   title: "Exhibitions 3",
-        //   artist: "Gallery Mold",
-        //   category: "exhibitions",
-        //   image: "images/exhibitions/e3.png",
-        //   description:
-        //     "Step into art, our interactive live art shows will let you feel every strocks & story.",
-        // },
 
+        // Verve items with detailed information
+        {
+          id: 14,
+          title: "Artwork Title 1",
+          artist: "Ayush Modi",
+          category: "verve",
+          image: "images/verve/1.webp",
+          medium: "Charcoal on paper",
+          size: "11in x 15in",
+          venue: "Verve, Gallery MOLD",
+          type: "Painting",
+        },
+        {
+          id: 15,
+          title: "Artwork Title 2",
+          artist: "Artist Name",
+          category: "verve",
+          image: "images/verve/2.webp",
+          medium: "Oil on canvas",
+          size: "24in x 36in",
+          venue: "Verve, Gallery MOLD",
+          type: "Painting",
+        },
         {
           id: 16,
+          title: "Artwork Title 3",
+          artist: "Artist Name",
+          category: "verve",
+          image: "images/verve/3.webp",
+          medium: "Acrylic on canvas",
+          size: "18in x 24in",
+          venue: "Verve, Gallery MOLD",
+          type: "Painting",
+        },
+        {
+          id: 17,
+          title: "Artwork Title 4",
+          artist: "Artist Name",
+          category: "verve",
+          image: "images/verve/4.webp",
+          medium: "Mixed media",
+          size: "20in x 30in",
+          venue: "Verve, Gallery MOLD",
+          type: "Painting",
+        },
+        {
+          id: 18,
+          title: "Artwork Title 5",
+          artist: "Artist Name",
+          category: "verve",
+          image: "images/verve/5.webp",
+          medium: "Watercolor on paper",
+          size: "12in x 16in",
+          venue: "Verve, Gallery MOLD",
+          type: "Painting",
+        },
+        // Add more verve items as needed...
+        {
+          id: 19,
+          title: "Artwork Title 6",
+          artist: "Artist Name",
+          category: "verve",
+          image: "images/verve/6.webp",
+          medium: "Oil on canvas",
+          size: "30in x 40in",
+          venue: "Verve, Gallery MOLD",
+          type: "Painting",
+        },
+        // Continue with remaining verve items following the same pattern...
+
+        {
+          id: 60,
           title: "",
           artist: "Gallery Mold",
           category: "talkshows",
@@ -969,7 +1327,7 @@
             "Gallery Mold hosted an inspiring talk bridging art, its history, and its impact on modern times.",
         },
         {
-          id: 17,
+          id: 61,
           title: "",
           artist: "Gallery Mold",
           category: "talkshows",
@@ -977,7 +1335,7 @@
           description: "Behind the scenes",
         },
         {
-          id: 18,
+          id: 62,
           title: "",
           artist: "Gallery Mold",
           category: "talkshows",
@@ -985,7 +1343,7 @@
           description: "A talk by Professor Shivaji K. Panikkar",
         },
         {
-          id: 19,
+          id: 63,
           title: "",
           artist: "Gallery Mold",
           category: "talkshows",
@@ -993,7 +1351,6 @@
           description:
             "Young artists engage in an inspiring learning session with Professor Shivaji K. Panikkar .",
         },
-        // Add more items as needed
       ];
 
       // DOM elements
@@ -1004,6 +1361,8 @@
       const modalTitle = document.getElementById("modalTitle");
       const modalDescription = document.getElementById("modalDescription");
       const modalClose = document.getElementById("modalClose");
+      const modalPrev = document.getElementById("modalPrev");
+      const modalNext = document.getElementById("modalNext");
 
       // Dropdown elements
       const dropdownBtn = document.getElementById("artShowsBtn");
@@ -1012,6 +1371,8 @@
       const dropdownArrow = document.querySelector(".dropdown-arrow");
 
       let currentFilter = "all";
+      let currentFilteredData = [];
+      let currentImageIndex = 0;
 
       // Initialize gallery
       function initGallery() {
@@ -1029,7 +1390,8 @@
         if (
           filter === "all" ||
           filter === "sediments" ||
-          filter === "oldtoself"
+          filter === "oldtoself" ||
+          filter === "verve"
         ) {
           // Art Shows filters
           filteredData =
@@ -1037,7 +1399,8 @@
               ? galleryData.filter(
                   (item) =>
                     item.category === "sediments" ||
-                    item.category === "oldtoself"
+                    item.category === "oldtoself" ||
+                    item.category === "verve"
                 )
               : galleryData.filter((item) => item.category === filter);
         } else {
@@ -1045,28 +1408,31 @@
           filteredData = galleryData.filter((item) => item.category === filter);
         }
 
+        currentFilteredData = filteredData;
+
         if (filteredData.length === 0) {
           galleryGrid.innerHTML =
             '<p style="grid-column: 1/-1; text-align: center; font-size: 18px; color: #666;">No items found for this category.</p>';
           return;
         }
 
+        // Always use grid layout, but Verve items will open special modal
+        galleryGrid.style.display = "grid";
         galleryGrid.innerHTML = filteredData
           .map(
-            (item) => `
-                    <div class="gallery-item" data-id="${item.id}">
-                      <img src="${item.image}" alt="${item.title}">
-                    </div>
-                  `
+            (item, index) => `
+              <div class="gallery-item" data-index="${index}">
+                <img src="${item.image}" alt="${item.title}">
+              </div>
+            `
           )
           .join("");
 
         // Add click listeners to gallery items
         document.querySelectorAll(".gallery-item").forEach((item) => {
           item.addEventListener("click", () => {
-            const id = parseInt(item.dataset.id);
-            const data = galleryData.find((artwork) => artwork.id === id);
-            openModal(data);
+            const index = parseInt(item.dataset.index);
+            openModal(index);
           });
         });
       }
@@ -1149,22 +1515,102 @@
           if (e.target === modal) closeModal();
         });
 
-        // Close modal with Escape key
+        // Navigation buttons
+        modalPrev.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showPreviousImage();
+        });
+
+        modalNext.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showNextImage();
+        });
+
+        // Keyboard navigation
         document.addEventListener("keydown", (e) => {
-          if (e.key === "Escape" && modal.style.display === "flex") {
-            closeModal();
+          if (modal.style.display === "flex") {
+            if (e.key === "Escape") {
+              closeModal();
+            } else if (e.key === "ArrowLeft") {
+              showPreviousImage();
+            } else if (e.key === "ArrowRight") {
+              showNextImage();
+            }
           }
         });
       }
 
       // Open modal with artwork data
-      function openModal(artwork) {
-        modalImage.src = artwork.image;
-        modalImage.alt = artwork.title;
-        modalTitle.textContent = artwork.title;
-        modalDescription.textContent = `${artwork.description} - by ${artwork.artist}`;
+      function openModal(index) {
+        currentImageIndex = index;
+        updateModalContent();
         modal.style.display = "flex";
         document.body.style.overflow = "hidden";
+      }
+
+      // Update modal content
+      function updateModalContent() {
+        const artwork = currentFilteredData[currentImageIndex];
+        const modalContent = document.getElementById("modalContent");
+        const modalInfo = document.getElementById("modalInfo");
+
+        modalImage.src = artwork.image;
+        modalImage.alt = artwork.title;
+
+        // Check if it's a Verve item
+        if (artwork.category === "verve") {
+          // Apply Verve layout
+          modalContent.className = "modal-content verve-layout";
+
+          // Create Verve-specific content
+          modalInfo.innerHTML = `
+            <h3>${artwork.title}</h3>
+            <p class="modal-artist-name">${artwork.artist}</p>
+            <div class="modal-details">
+              <p><strong>Medium:</strong> ${artwork.medium || "N/A"}</p>
+              <p><strong>Size:</strong> ${artwork.size || "N/A"}</p>
+              <p><strong>Venue:</strong> ${
+                artwork.venue || "Verve, Gallery MOLD"
+              }</p>
+              <p><strong>Type:</strong> ${artwork.type || "Painting"}</p>
+            </div>
+            <p class="modal-img-price"><strong>Price on Request</strong></p>
+            <a href="index.html#contactus" class="modal-enquiry-btn" onclick="closeModal()">Enquiry</a>
+          `;
+        } else {
+          // Apply default layout
+          modalContent.className = "modal-content default-layout";
+
+          // Create default content
+          modalTitle.textContent = artwork.title;
+          modalDescription.textContent = `${artwork.description} ${artwork.artist}`;
+
+          modalInfo.innerHTML = `
+            <h3>${artwork.title}</h3>
+            <p>${artwork.description} ${artwork.artist}</p>
+          `;
+        }
+
+        // Update button states
+        modalPrev.disabled = currentImageIndex === 0;
+        modalNext.disabled =
+          currentImageIndex === currentFilteredData.length - 1;
+      }
+
+      // Show previous image
+      function showPreviousImage() {
+        if (currentImageIndex > 0) {
+          currentImageIndex--;
+          updateModalContent();
+        }
+      }
+
+      // Show next image
+      function showNextImage() {
+        if (currentImageIndex < currentFilteredData.length - 1) {
+          currentImageIndex++;
+          updateModalContent();
+        }
       }
 
       // Close modal
@@ -1175,558 +1621,9 @@
 
       // Initialize when DOM is loaded
       document.addEventListener("DOMContentLoaded", initGallery);
-    </script>
 
-    <script>
-      // // Gallery data - replace with your actual images and data
-      // const galleryData = [
-      //   {
-      //     id: 1,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/5.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 2,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/6.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 3,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/7.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 4,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/8.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 5,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/9.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 6,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/10.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 7,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/11.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 8,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/12.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 9,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/13.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 10,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/14.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 11,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/15.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 12,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/16.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 13,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/17.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 14,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/18.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 15,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/19.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 16,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/20.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 17,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/21.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 18,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/22.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 19,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/23.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 20,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/24.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 21,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "sediments",
-      //     image: "images/sediments/25.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 22,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/1.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 23,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/2.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 24,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/3.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 25,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/8.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 26,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/9.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 27,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/10.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 28,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/11.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 29,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/13.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 30,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/14.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 31,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/15.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 32,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/16.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 33,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/17.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 34,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/18.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 35,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/23.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 36,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/24.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 37,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/25.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 38,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/26.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 39,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/27.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 40,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/28.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 41,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/29.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 42,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/30.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 43,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/31.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 44,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/32.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 45,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/33.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 46,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/34.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 47,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/35.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 48,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/36.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 49,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/37.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 50,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/38.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      //   {
-      //     id: 51,
-      //     title: "Abstract Expression I",
-      //     artist: "Eva Joy",
-      //     category: "oldtoself",
-      //     image: "images/oldtoself/39.webp",
-      //     description:
-      //       "A vibrant exploration of color and form that captures the essence of human emotion.",
-      //   },
-      // ];
-
-      // // DOM elements
-      // const galleryGrid = document.getElementById("galleryGrid");
-      // const filterBtns = document.querySelectorAll(".filter-btn");
-      // const modal = document.getElementById("galleryModal");
-      // const modalImage = document.getElementById("modalImage");
-      // const modalTitle = document.getElementById("modalTitle");
-      // const modalDescription = document.getElementById("modalDescription");
-      // const modalClose = document.getElementById("modalClose");
+      // Loader
       const loader = document.getElementById("loader");
-
-      // Initialize gallery
-      function initGallery() {
-        renderGallery("all");
-        setupFilters();
-        setupModal();
-        hideLoader();
-      }
-
-      // Render gallery items
-      function renderGallery(filter) {
-        const filteredData =
-          filter === "all"
-            ? galleryData
-            : galleryData.filter((item) => item.category === filter);
-
-        galleryGrid.innerHTML = filteredData
-          .map(
-            (item) => `
-              <div class="gallery-item" data-id="${item.id}">
-                <img src="${item.image}" alt="${item.title}">
-          
-              </div>
-            `
-          )
-          .join("");
-
-        // Add click listeners to gallery items
-        document.querySelectorAll(".gallery-item").forEach((item) => {
-          item.addEventListener("click", () => {
-            const id = parseInt(item.dataset.id);
-            const data = galleryData.find((artwork) => artwork.id === id);
-            openModal(data);
-          });
-        });
-      }
-
-      // Setup filter functionality
-      function setupFilters() {
-        filterBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            // Update active button
-            filterBtns.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            // Filter gallery
-            const filter = btn.dataset.filter;
-            renderGallery(filter);
-          });
-        });
-      }
-
-      // Setup modal functionality
-      function setupModal() {
-        modalClose.addEventListener("click", closeModal);
-        modal.addEventListener("click", (e) => {
-          if (e.target === modal) closeModal();
-        });
-      }
-
-      // Open modal with artwork data
-      function openModal(artwork) {
-        modalImage.src = artwork.image;
-        modalImage.alt = artwork.title;
-        modalTitle.textContent = artwork.title;
-        modalDescription.textContent = `${artwork.description} - by ${artwork.artist}`;
-        modal.style.display = "flex";
-        document.body.style.overflow = "hidden";
-      }
-
-      // Close modal
-      function closeModal() {
-        modal.style.display = "none";
-        document.body.style.overflow = "auto";
-      }
-
-      // Hide loader
       function hideLoader() {
         setTimeout(() => {
           if (loader) {
@@ -1765,8 +1662,7 @@
         });
       });
 
-      // Initialize when DOM is loaded
-      document.addEventListener("DOMContentLoaded", initGallery);
+      hideLoader();
     </script>
 
     <link
