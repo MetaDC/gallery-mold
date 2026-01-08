@@ -389,6 +389,39 @@
       .top-left-icons a:hover .fa-x-twitter {
         color: #000;
       }
+      .ektava-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 9999;
+      }
+
+      .ektava-content {
+        background: #fff;
+        width: 90%;
+        max-width: 900px;
+        height: 700px;
+        margin: 5% auto;
+        border-radius: 8px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .ektava-content iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .ektava-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 10;
+      }
     </style>
   </head>
 
@@ -532,6 +565,37 @@
         <div class="custom-carousel">
           <!-- Slide 1 (Desktop + Mobile image switch) -->
           <div class="carousel-slide active">
+            <!-- Clickable Banner -->
+            <picture id="openEktava" style="cursor: pointer">
+              <!-- Mobile -->
+              <source
+                srcset="images/hero/ekatvamob.webp"
+                media="(max-width: 767px)"
+              />
+              <!-- Desktop -->
+              <img
+                src="images/hero/ekatvaweb.webp"
+                class="img-fluid"
+                alt="Verve Banner"
+              />
+            </picture>
+
+            <!-- EKTAVA Popup -->
+            <div id="ektavaPopup" class="ektava-overlay">
+              <div class="ektava-content">
+                <span class="ektava-close">&times;</span>
+
+                <iframe
+                  src="https://app.simplymeet.me/gallerymold/1767859979?is_widget=1&view=compact&specific-meeting-type=1"
+                  frameborder="0"
+                  scrolling="yes"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 1 (Desktop + Mobile image switch) -->
+          <div class="carousel-slide">
             <picture>
               <!-- Mobile -->
               <source
@@ -1849,6 +1913,21 @@
         swiper.on("touchStart", pauseAllYtVideos);
         swiper.on("transitionStart", pauseAllYtVideos);
       }
+    </script>
+    <script>
+      const openEktava = document.getElementById("openEktava");
+      const ektavaPopup = document.getElementById("ektavaPopup");
+      const closeEktava = document.querySelector(".ektava-close");
+
+      openEktava.onclick = () => (ektavaPopup.style.display = "block");
+      closeEktava.onclick = () => (ektavaPopup.style.display = "none");
+
+      // Close when clicking outside content
+      ektavaPopup.onclick = (e) => {
+        if (e.target === ektavaPopup) {
+          ektavaPopup.style.display = "none";
+        }
+      };
     </script>
   </body>
 </html>
