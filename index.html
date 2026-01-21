@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -366,7 +366,9 @@
       .top-left-icons a {
         color: #333;
         font-size: 20px;
-        transition: color 0.3s ease, transform 0.3s ease;
+        transition:
+          color 0.3s ease,
+          transform 0.3s ease;
         text-decoration: none;
       }
 
@@ -438,7 +440,7 @@
         <p style="margin-top: 20px">
           Join us for an exciting event! Register now to save your spot.
         </p>
-        <button onclick="window.location.href='/contact.html'">
+        <button onclick="window.location.href = '/contact.html'">
           Register Now
         </button>
       </div>
@@ -452,7 +454,10 @@
 
         <button
           class="booknow-btn"
-          onclick="window.location.href='https://app.simplymeet.me/gallerymold/1767859979'"
+          onclick="
+            window.location.href =
+              'https://app.simplymeet.me/gallerymold/1767859979'
+          "
         >
           Book Now
         </button>
@@ -497,7 +502,10 @@
 
       <button
         class="booknow-btn"
-        onclick="window.location.href='https://app.simplymeet.me/gallerymold/1767859979'"
+        onclick="
+          window.location.href =
+            'https://app.simplymeet.me/gallerymold/1767859979'
+        "
       >
         Book Now
       </button>
@@ -727,7 +735,7 @@
             </p>
             <button
               class="artist-btn"
-              onclick="window.location.href='about.html'"
+              onclick="window.location.href = 'about.html'"
             >
               Read More
             </button>
@@ -1439,7 +1447,7 @@
           <p>Stay connected Stay inspired</p>
           <button
             class="artist-btn"
-            onclick="window.location.href='contact.html'"
+            onclick="window.location.href = 'contact.html'"
           >
             Contact Us
           </button>
@@ -1606,7 +1614,7 @@
       const artistSliderDotsContainer =
         document.getElementById("artistSliderDots");
       const artistSliderSlides = document.querySelectorAll(
-        ".artistSlider-slide"
+        ".artistSlider-slide",
       );
 
       let isDown = false;
@@ -1665,7 +1673,7 @@
       // Update active dot
       function updateArtistSliderDots() {
         const index = Math.round(
-          artistSlider.scrollLeft / artistSlider.offsetWidth
+          artistSlider.scrollLeft / artistSlider.offsetWidth,
         );
         document.querySelectorAll(".artistSlider-dot").forEach((dot, i) => {
           dot.classList.toggle("active", i === index);
