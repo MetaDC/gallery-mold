@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -1191,7 +1191,10 @@
       <a href="index.html"
         ><img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo"
       /></a>
-      <button class="booknow-btn" onclick="window.location.href='contact.html'">
+      <button
+        class="booknow-btn"
+        onclick="window.location.href = 'contact.html'"
+      >
         Book Now
       </button>
       <div class="hamburger" id="toggleBtn">&#9776;</div>
@@ -2149,7 +2152,7 @@
                   (item) =>
                     item.category === "sediments" ||
                     item.category === "oldtoself" ||
-                    item.category === "verve"
+                    item.category === "verve",
                 )
               : galleryData.filter((item) => item.category === filter);
         } else {
@@ -2171,7 +2174,7 @@
               <div class="gallery-item" data-index="${index}">
                 <img src="${item.image}" alt="${item.title}">
               </div>
-            `
+            `,
           )
           .join("");
 
@@ -2446,7 +2449,7 @@
                 "Content-Type": "application/json",
               },
               body: JSON.stringify(data),
-            }
+            },
           );
 
           if (!response.ok) throw new Error("Failed to send enquiry");

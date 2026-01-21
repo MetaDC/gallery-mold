@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
@@ -581,7 +581,7 @@
 
         <button
           class="booknow-btn"
-          onclick="window.location.href='contact.html'"
+          onclick="window.location.href = 'https://forms.gle/TBMWoDtPCmXotu917'"
         >
           Book Now
         </button>
@@ -625,7 +625,10 @@
         <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo"
       /></a>
 
-      <button class="booknow-btn" onclick="window.location.href='contact.html'">
+      <button
+        class="booknow-btn"
+        onclick="window.location.href = 'contact.html'"
+      >
         Book Now
       </button>
       <div class="hamburger" id="toggleBtn">&#9776;</div>
@@ -866,7 +869,7 @@
           <img src="${item.image}" alt="${item.title}">
    
         </div>
-      `
+      `,
           )
           .join("");
 
@@ -918,7 +921,7 @@
         <p>${artwork.description} - by ${artwork.artist}</p>
       </div>
     </div>
-  `
+  `,
           )
           .join("");
 

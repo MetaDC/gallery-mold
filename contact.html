@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -507,7 +507,7 @@
 
         <!-- <button
           class="booknow-btn"
-          onclick="window.location.href='contact.html'"
+      onclick="window.location.href = 'https://forms.gle/TBMWoDtPCmXotu917'"
         >
           Book Now
         </button> -->
@@ -887,7 +887,7 @@
                 month: "short",
                 day: "numeric",
                 year: "numeric",
-              })
+              }),
             )
             .join(", ");
 
@@ -940,7 +940,7 @@
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(data),
-              }
+              },
             );
 
             const result = await response.text();

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <script
@@ -550,7 +550,9 @@
         padding: 2.5rem;
         border-radius: 15px;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
         text-align: center;
       }
 
@@ -787,7 +789,7 @@
 
         <button
           class="booknow-btn"
-          onclick="window.location.href='contact.html'"
+          onclick="window.location.href = 'https://forms.gle/TBMWoDtPCmXotu917'"
         >
           Book Now
         </button>
@@ -830,7 +832,10 @@
       <a href="index.html">
         <img src="images/gallerymold-logo-mob.png" alt="Logo" class="logo"
       /></a>
-      <button class="booknow-btn" onclick="window.location.href='contact.html'">
+      <button
+        class="booknow-btn"
+        onclick="window.location.href = 'contact.html'"
+      >
         Book Now
       </button>
       <div class="hamburger" id="toggleBtn">&#9776;</div>
